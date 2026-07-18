@@ -1,0 +1,486 @@
+﻿<!doctype html>
+<html lang="en" id="html-root">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Programme — Into The Sunset · Sept 11 &amp; 12, 2026</title>
+<meta name="description" content="Full programme and artist lineup for Into The Sunset. Two days of live music, activations, and cocktails at McGill Lower Field, Montréal. Sept 11 &amp; 12, 2026.">
+<meta name="theme-color" content="#0A0814">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Into The Sunset">
+<meta property="og:title" content="Programme — Into The Sunset · Sept 11 &amp; 12, 2026">
+<meta property="og:description" content="Full programme and artist lineup for Into The Sunset. Two days of live music, activations, and cocktails at McGill Lower Field, Montréal.">
+<meta property="og:url" content="https://kimgianguyen.github.io/intothesunset/programme.html">
+<meta property="og:image" content="https://kimgianguyen.github.io/intothesunset/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Into The Sunset — an outdoor music festival at McGill Lower Field, Montréal · Sept 11 &amp; 12, 2026">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Programme — Into The Sunset · Sept 11 &amp; 12, 2026">
+<meta name="twitter:description" content="Full programme and artist lineup. Two days of live music, activations, and cocktails at McGill Lower Field, Montréal.">
+<meta name="twitter:image" content="https://kimgianguyen.github.io/intothesunset/og-image.jpg">
+<link rel="canonical" href="https://kimgianguyen.github.io/intothesunset/programme.html">
+<style id="page-fx">@keyframes its-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}#root{opacity:0}#root.its-ready{animation:its-in .5s cubic-bezier(.22,1,.36,1) both}body.its-out #root{opacity:0;transform:translateY(-5px);transition:opacity .25s ease,transform .25s ease}body.its-out{pointer-events:none}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bowlby+One&family=Barlow+Condensed:wght@500;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Mono&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#1A0B2E; --dusk:#2D1F4F; --plum:#3D2960;
+    --gold:#FFD93D; --coral:#FF6B9D; --magenta:#C44CFF;
+    --cream:#FFF5F8; --cream-soft:rgba(255,245,248,0.9); --cream-mute:rgba(255,245,248,0.55);
+    --serif:"Bowlby One",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:var(--night); color:var(--cream); font-family:var(--sans); -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; text-decoration:none; }
+  button{ font-family:inherit; cursor:pointer; border:none; background:none; color:inherit; }
+  img{ max-width:100%; display:block; }
+  .label{ font-family:var(--sans); font-weight:600; text-transform:uppercase; letter-spacing:0.22em; font-size:11px; }
+  .h-serif{ font-family:var(--serif); font-weight:700; line-height:0.95; letter-spacing:-0.005em; text-transform:uppercase; }
+  .italic-coral{ font-style:italic; color:var(--coral); }
+  .wrap{ max-width:1280px; margin:0 auto; padding:0 32px; }
+  @media(max-width:720px){ .wrap{ padding:0 20px; } }
+  @keyframes twinkle{ 0%,100%{ opacity:0.15; } 50%{ opacity:0.7; } }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel">
+
+// ─── Language system ──────────────────────────────────────────────────────────
+const LangContext = React.createContext({ lang:'en', setLang:()=>{} });
+function useLang(){
+  const {lang} = React.useContext(LangContext);
+  return (en, fr) => lang === 'fr' ? fr : en;
+}
+function LangLink(){
+  const {lang, setLang} = React.useContext(LangContext);
+  const next = lang === 'en' ? 'fr' : 'en';
+  const label = lang === 'en' ? 'Français' : 'English';
+  return (
+    <button onClick={() => { setLang(next); localStorage.setItem('its_lang',next); document.getElementById('html-root').lang=next; }}
+      style={{ background:'none', border:'none', cursor:'pointer', padding:0, fontSize:11, letterSpacing:'0.1em', color:'var(--cream-mute)', transition:'color 160ms', fontFamily:'inherit' }}
+      onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'}
+      onMouseLeave={e=>e.currentTarget.style.color='var(--cream-mute)'}
+    >{label}</button>
+  );
+}
+
+// ─── Shared primitives ────────────────────────────────────────────────────────
+function SectionLabel({ children, color = 'var(--gold)' }){
+  return <div className="label" style={{ color }}>{children}</div>;
+}
+
+function makeTornPath(seed=1, segments=18, width=1440, height=48){
+  let s = seed*9301+49297;
+  const rand = () => { s=(s*9301+49297)%233280; return s/233280; };
+  const step = width/segments;
+  let d = `M0,${height} L0,${height*0.55}`;
+  for(let i=0;i<=segments;i++){
+    const x=i*step, baseY=height*0.4, jitter=(rand()-0.5)*height*0.7;
+    const y=Math.max(2,Math.min(height-2,baseY+jitter));
+    if(i%3===0){ d+=` L${x.toFixed(1)},${y.toFixed(1)}`; }
+    else{ const cx=x-step*0.5, cy=y+(rand()-0.5)*14; d+=` Q${cx.toFixed(1)},${cy.toFixed(1)} ${x.toFixed(1)},${y.toFixed(1)}`; }
+  }
+  return d+` L${width},${height} Z`;
+}
+function TornEdge({ fill='#0A0814', seed=1, position='bottom', height=56, accent }){
+  const path = React.useMemo(()=>makeTornPath(seed,22,1440,height),[seed,height]);
+  const accentPath = React.useMemo(()=>makeTornPath(seed+7,22,1440,height*0.85),[seed,height]);
+  return (
+    <div style={{ position:'absolute', left:0, right:0, [position]:-1, height, pointerEvents:'none', zIndex:4, transform: position==='top'?'scaleY(-1)':'none' }}>
+      <svg viewBox={`0 0 1440 ${height}`} preserveAspectRatio="none" style={{ width:'100%', height:'100%' }}>
+        {accent && <path d={accentPath} fill={accent} opacity="0.55" transform={`translate(0,${height*0.06})`} />}
+        <path d={path} fill={fill} />
+      </svg>
+    </div>
+  );
+}
+
+// ─── Nav ──────────────────────────────────────────────────────────────────────
+function Nav(){
+  const t = useLang();
+  const links=[[t('Programme','Programme'),'programme.html'],[t('Tickets','Billets'),'tickets.html'],[t('The Field','Le Terrain'),'village.html'],['FAQ','faq.html'],[t('Partners','Partenaires'),'partners.html'],[t('Contact','Contact'),'contact.html']];
+  const [scrolled,setScrolled]=React.useState(false);
+  React.useEffect(()=>{
+    const fn=()=>setScrolled(window.scrollY>30);
+    window.addEventListener('scroll',fn,{passive:true});
+    return ()=>window.removeEventListener('scroll',fn);
+  },[]);
+  return (
+    <nav style={{ position:'fixed',top:0,left:0,right:0,zIndex:50, transition:'background 220ms ease,backdrop-filter 220ms ease,border-color 220ms ease', background:scrolled?'rgba(26,11,46,0.82)':'transparent', backdropFilter:scrolled?'blur(14px) saturate(140%)':'none', WebkitBackdropFilter:scrolled?'blur(14px) saturate(140%)':'none', borderBottom:scrolled?'1px solid rgba(255,245,248,0.08)':'1px solid transparent' }}>
+      <div className="wrap" style={{ display:'flex',alignItems:'center',justifyContent:'space-between',height:64 }}>
+        <a href="index.html" style={{ display:'flex',alignItems:'center',gap:10 }}>
+          <span style={{ width:14,height:14,borderRadius:'50%',background:'radial-gradient(circle at 35% 35%,#FFD27A,var(--gold) 60%,#8a4a00 100%)',boxShadow:'0 0 14px rgba(224,149,0,0.7)' }} />
+          <span className="label" style={{ letterSpacing:'0.28em' }}>Into The Sunset</span>
+        </a>
+        <div style={{ display:'flex',gap:28,alignItems:'center' }}>
+          <div style={{ display:'flex',gap:24 }}>
+            {links.map(([label,href])=>(
+              <a key={href} href={href} className="label" style={{ color:'var(--cream-soft)',fontSize:11,transition:'color 160ms' }}
+                onMouseEnter={e=>e.currentTarget.style.color='var(--gold)'}
+                onMouseLeave={e=>e.currentTarget.style.color='var(--cream-soft)'}
+              >{label}</a>
+            ))}
+          </div>
+          <a href="tickets.html" style={{ background:'var(--magenta)',color:'var(--cream)',padding:'10px 18px',borderRadius:999,fontSize:12,fontWeight:600,letterSpacing:'0.14em',textTransform:'uppercase',transition:'box-shadow 200ms,transform 160ms' }}
+            onMouseEnter={e=>{ e.currentTarget.style.boxShadow='0 0 24px rgba(196,76,255,0.55)'; e.currentTarget.style.transform='translateY(-1px)'; }}
+            onMouseLeave={e=>{ e.currentTarget.style.boxShadow='none'; e.currentTarget.style.transform='translateY(0)'; }}
+          >{t('Get Tickets','Obtenir des billets')}</a>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+// ─── Hero ─────────────────────────────────────────────────────────────────────
+function Stars({ count=40 }){
+  const stars = React.useMemo(()=>Array.from({length:count},()=>({x:Math.random()*100,y:Math.random()*100,s:Math.random()*1.4+0.4,d:Math.random()*5})),[count]);
+  return (
+    <div style={{ position:'absolute',inset:0 }}>
+      {stars.map((s,i)=>(
+        <div key={i} style={{ position:'absolute',left:`${s.x}%`,top:`${s.y}%`,width:s.s,height:s.s,borderRadius:'50%',background:'var(--cream)',animation:`twinkle 3.5s ease-in-out ${s.d}s infinite` }} />
+      ))}
+    </div>
+  );
+}
+
+function PageHero(){
+  const t = useLang();
+  return (
+    <section style={{ position:'relative', background:'var(--night)', padding:'140px 0 88px', overflow:'hidden', textAlign:'center' }}>
+      <div style={{ position:'absolute', inset:0, background:'linear-gradient(to bottom,#060412 0%,#1A0B2E 35%,#2D1F4F 65%,#3D1540 80%,rgba(255,107,157,0.12) 100%)' }} />
+      <div style={{ position:'absolute', inset:0, background:'radial-gradient(ellipse 70% 50% at 50% 100%,rgba(255,107,157,0.18),transparent 65%)' }} />
+      <Stars count={55} />
+      <div className="wrap" style={{ position:'relative',zIndex:1 }}>
+        <div className="label" style={{ color:'var(--gold)',marginBottom:20 }}>Into The Sunset · McGill Lower Field</div>
+        <h1 className="h-serif" style={{ fontSize:'clamp(52px,9vw,120px)',margin:'0 0 20px',color:'var(--cream)' }}>
+          {t('Day ','')}<span style={{ fontStyle:'italic',color:'var(--coral)',textShadow:'0 0 60px rgba(255,107,157,0.45)' }}>{t('Programme','Programme')}</span>{t('',' de la journée')}
+        </h1>
+        <p style={{ fontSize:16,color:'var(--cream-mute)',maxWidth:520,margin:'0 auto 32px' }}>
+          {t('Two days. One field. Here\'s everything happening, hour by hour.','Deux jours. Un terrain. Voici tout ce qui se passe, heure par heure.')}
+        </p>
+        <div style={{ display:'inline-flex',gap:32,flexWrap:'wrap',justifyContent:'center' }}>
+          <div style={{ textAlign:'center' }}>
+            <div className="label" style={{ color:'var(--cream-mute)',fontSize:10,marginBottom:6 }}>{t('Day 1','Jour 1')}</div>
+            <div style={{ fontSize:15,fontWeight:500,color:'var(--cream)' }}>{t('Sept 11, 2026','11 sept. 2026')}</div>
+          </div>
+          <span style={{ width:1,background:'rgba(255,245,248,0.15)',alignSelf:'stretch' }} />
+          <div style={{ textAlign:'center' }}>
+            <div className="label" style={{ color:'var(--cream-mute)',fontSize:10,marginBottom:6 }}>{t('Day 2','Jour 2')}</div>
+            <div style={{ fontSize:15,fontWeight:500,color:'var(--cream)' }}>{t('Sept 12, 2026','12 sept. 2026')}</div>
+          </div>
+          <span style={{ width:1,background:'rgba(255,245,248,0.15)',alignSelf:'stretch' }} />
+          <div style={{ textAlign:'center' }}>
+            <div className="label" style={{ color:'var(--cream-mute)',fontSize:10,marginBottom:6 }}>{t('Venue','Lieu')}</div>
+            <div style={{ fontSize:15,fontWeight:500,color:'var(--cream)' }}>McGill Lower Field</div>
+          </div>
+        </div>
+      </div>
+      <TornEdge fill="var(--dusk)" accent="var(--coral)" seed={3} position="bottom" height={72} />
+    </section>
+  );
+}
+
+// ─── Schedule (WebGL smoke + table) ───────────────────────────────────────────
+const SMOKE_FRAG=`#version 300 es
+precision highp float;
+out vec4 O;
+uniform float time;
+uniform vec2 resolution;
+uniform vec3 u_color;
+#define FC gl_FragCoord.xy
+#define R resolution
+#define T (time+660.)
+float rnd(vec2 p){p=fract(p*vec2(12.9898,78.233));p+=dot(p,p+34.56);return fract(p.x*p.y);}
+float noise(vec2 p){vec2 i=floor(p),f=fract(p),u=f*f*(3.-2.*f);return mix(mix(rnd(i),rnd(i+vec2(1,0)),u.x),mix(rnd(i+vec2(0,1)),rnd(i+1.),u.x),u.y);}
+float fbm(vec2 p){float t=.0,a=1.;for(int i=0;i<5;i++){t+=a*noise(p);p*=mat2(1,-1.2,.2,1.2)*2.;a*=.5;}return t;}
+void main(){
+  vec2 uv=(FC-.5*R)/R.y;
+  vec3 col=vec3(1);
+  uv.x+=.25;uv*=vec2(2,1);
+  float n=fbm(uv*.28-vec2(T*.01,0));
+  n=noise(uv*3.+n*2.);
+  col.r-=fbm(uv+vec2(0,T*.015)+n);
+  col.g-=fbm(uv*1.003+vec2(0,T*.015)+n+.003);
+  col.b-=fbm(uv*1.006+vec2(0,T*.015)+n+.006);
+  col=mix(col,u_color,dot(col,vec3(.21,.71,.07)));
+  col=mix(vec3(.08),col,min(time*.1,1.));
+  col=clamp(col,.08,1.);
+  O=vec4(col,1);
+}`;
+const SMOKE_VERT=`#version 300 es
+precision highp float;
+in vec4 position;
+void main(){gl_Position=position;}`;
+
+function SmokeCanvas(){
+  const ref=React.useRef(null);
+  React.useEffect(()=>{
+    const canvas=ref.current; if(!canvas)return;
+    const gl=canvas.getContext('webgl2'); if(!gl)return;
+    const compile=(type,src)=>{ const s=gl.createShader(type); gl.shaderSource(s,src); gl.compileShader(s); return s; };
+    const vs=compile(gl.VERTEX_SHADER,SMOKE_VERT);
+    const fs=compile(gl.FRAGMENT_SHADER,SMOKE_FRAG);
+    const prog=gl.createProgram();
+    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
+    const buf=gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,1,-1,-1,1,1,1,-1]),gl.STATIC_DRAW);
+    const pos=gl.getAttribLocation(prog,'position');
+    gl.enableVertexAttribArray(pos); gl.vertexAttribPointer(pos,2,gl.FLOAT,false,0,0);
+    const uRes=gl.getUniformLocation(prog,'resolution');
+    const uTime=gl.getUniformLocation(prog,'time');
+    const uColor=gl.getUniformLocation(prog,'u_color');
+    const resize=()=>{ const dpr=Math.max(1,window.devicePixelRatio||1); canvas.width=canvas.offsetWidth*dpr; canvas.height=canvas.offsetHeight*dpr; gl.viewport(0,0,canvas.width,canvas.height); };
+    resize();
+    const ro=new ResizeObserver(resize); ro.observe(canvas);
+    let raf;
+    const render=(now)=>{ gl.useProgram(prog); gl.uniform2f(uRes,canvas.width,canvas.height); gl.uniform1f(uTime,now*1e-3); gl.uniform3fv(uColor,[1,0.42,0.61]); gl.drawArrays(gl.TRIANGLE_STRIP,0,4); raf=requestAnimationFrame(render); };
+    raf=requestAnimationFrame(render);
+    return ()=>{ cancelAnimationFrame(raf); ro.disconnect(); };
+  },[]);
+  return React.createElement('canvas',{ ref, style:{ position:'absolute',inset:0,width:'100%',height:'100%',display:'block',zIndex:0 } });
+}
+
+function Legend({ color, label }){
+  return (
+    <div style={{ display:'flex',alignItems:'center',gap:8 }}>
+      <span style={{ width:8,height:8,borderRadius:'50%',background:color,boxShadow:`0 0 8px ${color}` }} />
+      <span className="label" style={{ color:'var(--cream-mute)',fontSize:11 }}>{label}</span>
+    </div>
+  );
+}
+
+function ScheduleRow({ time, what, where, phase, idx }){
+  const accent=phase==='sunset'?'var(--coral)':'var(--gold)';
+  const bg=idx%2===0?'rgba(26,11,46,0.55)':'rgba(26,11,46,0.85)';
+  const [hover,setHover]=React.useState(false);
+  return (
+    <div onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}
+      style={{ display:'grid',gridTemplateColumns:'24px 140px 1fr 180px',gap:24,alignItems:'center',padding:'20px 24px', background:hover?'rgba(61,41,96,0.5)':bg,transition:'background 180ms',borderTop:'1px solid rgba(255,245,248,0.04)' }}>
+      <span style={{ width:10,height:10,borderRadius:'50%',background:accent,boxShadow:`0 0 12px ${accent}` }} />
+      <div className="label" style={{ color:accent,fontSize:12 }}>{time}</div>
+      <div style={{ fontSize:17,fontWeight:500,color:'var(--cream)' }}>{what}</div>
+      <div style={{ fontSize:13,color:'var(--cream-mute)',textAlign:'right',letterSpacing:'0.04em' }}>{where}</div>
+    </div>
+  );
+}
+
+function SunsetDivider(){
+  const t = useLang();
+  return (
+    <div style={{ position:'relative',padding:'28px 24px',background:'linear-gradient(90deg,rgba(255,217,61,0.15),rgba(255,107,157,0.22),rgba(255,217,61,0.15))',borderTop:'1px solid var(--gold)',borderBottom:'1px solid var(--gold)',textAlign:'center' }}>
+      <span className="h-serif" style={{ fontSize:24,color:'var(--cream)',fontStyle:'italic' }}>
+        {t('The ','Le ')}<span style={{ fontStyle:'italic',color:'var(--coral)' }}>{t('Sunset','Coucher de Soleil')}</span>{t(' Begins',' Commence')}
+      </span>
+      <div className="label" style={{ color:'var(--cream-mute)',marginTop:6,fontSize:10 }}>{t('Wristband swap · ticketed entry from here','Échange de bracelet · entrée avec billet à partir d\'ici')}</div>
+    </div>
+  );
+}
+
+function ScheduleSection({ dayLabel, events }){
+  return (
+    <div style={{ marginBottom:64 }}>
+      <div style={{ display:'flex',alignItems:'center',gap:14,marginBottom:24 }}>
+        <span style={{ width:28,height:1,background:'var(--coral)' }} />
+        <span className="label" style={{ color:'var(--coral)',fontSize:11 }}>{dayLabel}</span>
+      </div>
+      <div style={{ borderRadius:12,overflow:'hidden',border:'1px solid rgba(255,245,248,0.08)' }}>
+        {events.map((e,i)=> e.divider
+          ? <SunsetDivider key={i} />
+          : <ScheduleRow key={i} idx={i} {...e} />
+        )}
+      </div>
+    </div>
+  );
+}
+
+const EVENTS_EN=[
+  { time:'11:00 AM', what:'Doors open · Activation Zone',      where:'Lower Field',  phase:'day' },
+  { time:'12:00 PM', what:'Tattoo station opens',               where:'Field Zone',   phase:'day' },
+  { time:'1:00 PM',  what:'Panel: Montréal Creative Industry',  where:'Main Stage',   phase:'day' },
+  { time:'2:00 PM',  what:'Pop-up market launches',             where:'Field Zone',   phase:'day' },
+  { time:'3:00 PM',  what:'Photo booth activation',             where:'Field Zone',   phase:'day' },
+  { time:'4:00 PM',  what:'Opening DJ warm-up sets',            where:'Main Stage',   phase:'day' },
+  { divider:true },
+  { time:'5:00 PM',  what:'Headliner DJ set begins',            where:'Main Stage',   phase:'sunset' },
+  { time:'6:30 PM',  what:'Golden hour peak · drinks special',  where:'Cocktail Bar', phase:'sunset' },
+  { time:'8:00 PM',  what:'Final hour · MC moment',             where:'Main Stage',   phase:'sunset' },
+  { time:'9:00 PM',  what:'Event closes',                       where:'Lower Field',  phase:'sunset' },
+];
+const EVENTS_FR=[
+  { time:'11 h',     what:'Ouverture des portes · Zone d\'activation', where:'Terrain inférieur', phase:'day' },
+  { time:'12 h',     what:'Ouverture de l\'atelier de tatouage',        where:'Zone du terrain',   phase:'day' },
+  { time:'13 h',     what:'Panel : Industrie créative montréalaise',    where:'Scène principale',  phase:'day' },
+  { time:'14 h',     what:'Lancement du marché éphémère',              where:'Zone du terrain',   phase:'day' },
+  { time:'15 h',     what:'Activation cabine photo',                    where:'Zone du terrain',   phase:'day' },
+  { time:'16 h',     what:'Sets d\'échauffement DJ d\'ouverture',       where:'Scène principale',  phase:'day' },
+  { divider:true },
+  { time:'17 h',     what:'Début du set DJ tête d\'affiche',            where:'Scène principale',  phase:'sunset' },
+  { time:'18 h 30',  what:'Apogée heure dorée · spécial boissons',     where:'Bar à cocktails',   phase:'sunset' },
+  { time:'20 h',     what:'Dernière heure · moment MC',                 where:'Scène principale',  phase:'sunset' },
+  { time:'21 h',     what:'Fermeture de l\'événement',                  where:'Terrain inférieur', phase:'sunset' },
+];
+
+function ScheduleBlock(){
+  const t = useLang();
+  const {lang} = React.useContext(LangContext);
+  const events = lang==='fr' ? EVENTS_FR : EVENTS_EN;
+  return (
+    <section style={{ position:'relative',background:'var(--dusk)',padding:'96px 0 100px',overflow:'hidden' }}>
+      <SmokeCanvas />
+      <div className="wrap" style={{ position:'relative',zIndex:1 }}>
+        <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-end',flexWrap:'wrap',gap:24,marginBottom:56 }}>
+          <div>
+            <SectionLabel>{t('Full Schedule','Programme complet')}</SectionLabel>
+            <h2 className="h-serif" style={{ fontSize:'clamp(36px,4.5vw,60px)',margin:'10px 0 0' }}>
+              {t('Hour by','Heure par')}{' '}<span style={{ fontStyle:'italic',color:'var(--coral)' }}>{t('hour.','heure.')}</span>
+            </h2>
+          </div>
+          <div style={{ display:'flex',gap:24,fontSize:12 }}>
+            <Legend color="var(--gold)" label={t('Afternoon · wristband','Après-midi · bracelet')} />
+            <Legend color="var(--coral)" label={t('Sunset · ticketed','Coucher de soleil · avec billet')} />
+          </div>
+        </div>
+        <ScheduleSection dayLabel={t('Day 1 · Sept 11 & Day 2 · Sept 12','Jour 1 · 11 sept. & Jour 2 · 12 sept.')} events={events} />
+      </div>
+      <TornEdge fill="var(--night)" accent="var(--gold)" seed={23} position="bottom" height={72} />
+    </section>
+  );
+}
+
+// ─── Passes reminder ──────────────────────────────────────────────────────────
+function PassesReminder(){
+  const t = useLang();
+  const passes = [
+    { label:t('Gold Hour Pass','Laissez-passer Heure Dorée'), price:'$35', desc:t('Activation Zone · 11 AM – 5 PM · Brand stations, market, tattoo, photo booth & cocktail bar.','Zone d\'activation · 11 h – 17 h · Kiosques, marché, tatouage, cabine photo & bar à cocktails.'), color:'var(--gold)', href:'tickets.html' },
+    { label:t('Sunset Pass','Laissez-passer Coucher de Soleil'), price:'$55', desc:t('Everything above + guaranteed entry to the DJ Closing Set · 5 PM – 9 PM · Limited capacity.','Tout ce qui précède + entrée garantie au Set DJ de clôture · 17 h – 21 h · Capacité limitée.'), color:'var(--coral)', href:'tickets.html' },
+  ];
+  return (
+    <section style={{ background:'var(--night)',padding:'80px 0 96px' }}>
+      <div className="wrap">
+        <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:24,maxWidth:880,margin:'0 auto' }}>
+          {passes.map(p=>(
+            <div key={p.label} style={{ background:'rgba(255,245,248,0.04)',border:`1px solid rgba(255,245,248,0.09)`,borderRadius:14,padding:'32px 28px' }}>
+              <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-start',marginBottom:14 }}>
+                <span className="h-serif" style={{ fontSize:22,color:'var(--cream)' }}>{p.label}</span>
+                <span className="h-serif" style={{ fontSize:28,color:p.color }}>{p.price}</span>
+              </div>
+              <p style={{ fontSize:14,color:'var(--cream-mute)',lineHeight:1.6,margin:'0 0 24px' }}>{p.desc}</p>
+              <a href={p.href} style={{ display:'inline-flex',alignItems:'center',gap:8,fontSize:12,fontWeight:600,letterSpacing:'0.14em',textTransform:'uppercase',color:p.color,borderBottom:`1px solid ${p.color}`,paddingBottom:2,transition:'opacity 160ms' }}>{t('Get pass','Obtenir le laissez-passer')} <span>→</span></a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─── Footer ───────────────────────────────────────────────────────────────────
+// ─── Social links — update these two URLs ────────────────────────────────────
+const INSTAGRAM_URL = 'https://www.instagram.com/festivalintothesunset';
+const TIKTOK_URL    = 'https://www.tiktok.com/@festivalintothesunset';
+
+function Footer(){
+  const t = useLang();
+  const menuLinks = [[t('Tickets','Billets'),'tickets.html'],['Programme','programme.html'],[t('The Field','Le Terrain'),'village.html'],['FAQ','faq.html'],[t('Partners','Partenaires'),'partners.html'],[t('Contact','Contact'),'contact.html']];
+  return (
+    <footer style={{ background:'var(--night)', borderTop:'1px solid rgba(224,149,0,0.3)', padding:'64px 0 32px' }}>
+      <div className="wrap">
+        <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', flexWrap:'wrap', gap:48, marginBottom:48 }}>
+          <div style={{ maxWidth:320 }}>
+            <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:16 }}>
+              <span style={{ width:12, height:12, borderRadius:'50%', background:'radial-gradient(circle at 35% 35%, #FFD27A, var(--gold) 60%, #8a4a00 100%)', boxShadow:'0 0 10px rgba(224,149,0,0.6)' }} />
+              <span className="label" style={{ letterSpacing:'0.28em', fontSize:11 }}>Into The Sunset</span>
+            </div>
+            <p className="h-serif" style={{ fontSize:16, lineHeight:1.5, letterSpacing:'0.04em', color:'var(--cream)', margin:'0 0 6px' }}>
+              {t('The last warm','La dernière soirée')}{' '}<span style={{ fontStyle:'italic', color:'var(--coral)' }}>{t('evening','chaude')}</span>{t(' of summer.',` de l'été.`)}
+            </p>
+            <p style={{ fontSize:12, color:'var(--cream-mute)', margin:0, lineHeight:1.6 }}>{t('Sept 11 & 12, 2026 · McGill Lower Field · Montréal','11 et 12 sept. 2026 · Terrain inférieur McGill · Montréal')}</p>
+          </div>
+          <div>
+            <div className="label" style={{ color:'var(--gold)', marginBottom:16, fontSize:10 }}>{t('Follow us','Suivez-nous')}</div>
+            <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"
+                style={{ display:'flex', alignItems:'center', gap:10, color:'var(--cream-mute)', fontSize:13, transition:'color 160ms' }}
+                onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'}
+                onMouseLeave={e=>e.currentTarget.style.color='var(--cream-mute)'}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+                Instagram
+              </a>
+              <a href={TIKTOK_URL} target="_blank" rel="noopener noreferrer"
+                style={{ display:'flex', alignItems:'center', gap:10, color:'var(--cream-mute)', fontSize:13, transition:'color 160ms' }}
+                onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'}
+                onMouseLeave={e=>e.currentTarget.style.color='var(--cream-mute)'}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+                TikTok
+              </a>
+            </div>
+          </div>
+          <div>
+            <div className="label" style={{ color:'var(--gold)', marginBottom:16, fontSize:10 }}>Menu</div>
+            <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:10 }}>
+              {menuLinks.map(([l,h])=>(
+                <li key={h}><a href={h} style={{ fontSize:13, color:'var(--cream-soft)', letterSpacing:'0.04em', transition:'color 160ms' }}
+                  onMouseEnter={e=>e.currentTarget.style.color='var(--gold)'}
+                  onMouseLeave={e=>e.currentTarget.style.color='var(--cream-soft)'}>{l}</a></li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div style={{ paddingTop:24, borderTop:'1px solid rgba(253,246,236,0.07)', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:16, fontSize:11, letterSpacing:'0.1em', color:'var(--cream-mute)' }}>
+          <span>© 2026 MomentsThatLive · {t('Produced in partnership with','Produit en partenariat avec')} EUS, McGill University · Montréal, QC</span>
+          <span style={{ display:'flex', gap:16, alignItems:'center' }}>
+            <a href="privacy.html" style={{ transition:'color 160ms' }} onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'} onMouseLeave={e=>e.currentTarget.style.color=''}>{t('Privacy','Confidentialité')}</a>
+            <a href="terms.html" style={{ transition:'color 160ms' }} onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'} onMouseLeave={e=>e.currentTarget.style.color=''}>{t('Terms','Modalités')}</a>
+            <LangLink />
+          </span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+// ─── App ──────────────────────────────────────────────────────────────────────
+function App(){
+  const [lang, setLang] = React.useState(localStorage.getItem('its_lang')||'en');
+  const setLangSave = l => { setLang(l); localStorage.setItem('its_lang',l); document.getElementById('html-root').lang=l; };
+  React.useEffect(()=>{ document.getElementById('html-root').lang=lang; },[lang]);
+  return (
+    <LangContext.Provider value={{lang, setLang:setLangSave}}>
+      <Nav />
+      <PageHero />
+      <ScheduleBlock />
+      <PassesReminder />
+      <Footer />
+    </LangContext.Provider>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+<script>(function(){var root=document.getElementById('root'),done=false;function show(){if(done)return;done=true;root.classList.add('its-ready');}if(root&&root.firstChild){show();}else{var o=new MutationObserver(function(){if(root.firstChild){o.disconnect();show();}});o.observe(root,{childList:true,subtree:true});setTimeout(show,900);}document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('http')||h.startsWith('mailto')||h.startsWith('javascript')||a.target==='_blank')return;e.preventDefault();root.classList.remove('its-ready');document.body.classList.add('its-out');setTimeout(function(){location.href=h},270);});})();</script>
+<script src="cookie-consent.js"></script>
+<div id="cursor-glow" aria-hidden="true"></div>
+<style>
+#cursor-glow{position:fixed;top:0;left:0;width:500px;height:500px;border-radius:50%;pointer-events:none;z-index:9998;background:radial-gradient(circle,rgba(255,217,61,0.12) 0%,rgba(255,107,157,0.06) 40%,transparent 68%);opacity:0;transition:opacity 0.5s ease;will-change:transform;}
+@media(hover:none){#cursor-glow{display:none}}
+</style>
+<script>
+(function(){
+  var el=document.getElementById('cursor-glow');
+  var mx=0,my=0,cx=0,cy=0,on=false;
+  document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;if(!on){on=true;el.style.opacity='1';}});
+  document.addEventListener('mouseleave',function(){el.style.opacity='0';on=false;});
+  (function loop(){cx+=(mx-cx)*0.07;cy+=(my-cy)*0.07;el.style.transform='translate(calc('+cx.toFixed(1)+'px - 50%),calc('+cy.toFixed(1)+'px - 50%))';requestAnimationFrame(loop);})();
+})();
+</script>
+</body>
+</html>

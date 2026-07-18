@@ -1,0 +1,458 @@
+﻿<!doctype html>
+<html lang="en" id="html-root">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Partners — Into The Sunset · Sept 11 &amp; 12, 2026</title>
+<meta name="description" content="The brands and partners who make Into The Sunset possible. Sept 11 &amp; 12, 2026 · McGill Lower Field, Montréal.">
+<meta name="theme-color" content="#1A0B2E">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Into The Sunset">
+<meta property="og:title" content="Partners — Into The Sunset · Sept 11 &amp; 12, 2026">
+<meta property="og:description" content="The brands and partners who make Into The Sunset possible. Sept 11 &amp; 12, 2026 · McGill Lower Field, Montréal.">
+<meta property="og:url" content="https://kimgianguyen.github.io/intothesunset/partners.html">
+<meta property="og:image" content="https://kimgianguyen.github.io/intothesunset/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Into The Sunset — an outdoor music festival at McGill Lower Field, Montréal · Sept 11 &amp; 12, 2026">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Partners — Into The Sunset · Sept 11 &amp; 12, 2026">
+<meta name="twitter:description" content="The brands and partners who make Into The Sunset possible. Sept 11 &amp; 12, 2026 · McGill Lower Field, Montréal.">
+<meta name="twitter:image" content="https://kimgianguyen.github.io/intothesunset/og-image.jpg">
+<link rel="canonical" href="https://kimgianguyen.github.io/intothesunset/partners.html">
+<style id="page-fx">@keyframes its-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}#root{opacity:0}#root.its-ready{animation:its-in .5s cubic-bezier(.22,1,.36,1) both}body.its-out #root{opacity:0;transform:translateY(-5px);transition:opacity .25s ease,transform .25s ease}body.its-out{pointer-events:none}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bowlby+One&family=Barlow+Condensed:wght@500;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Mono&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#1A0B2E; --dusk:#2D1F4F; --plum:#3D2960;
+    --gold:#FFD93D; --coral:#FF6B9D; --magenta:#C44CFF;
+    --cream:#FFF5F8; --cream-soft:rgba(255,245,248,0.9); --cream-mute:rgba(255,245,248,0.55);
+    --serif:"Bowlby One",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:var(--night); color:var(--cream); font-family:var(--sans); -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; text-decoration:none; }
+  button{ font-family:inherit; cursor:pointer; border:none; background:none; color:inherit; }
+  img{ max-width:100%; display:block; }
+  .label{ font-family:var(--sans); font-weight:600; text-transform:uppercase; letter-spacing:0.22em; font-size:11px; }
+  .h-serif{ font-family:var(--serif); font-weight:700; line-height:0.95; letter-spacing:-0.005em; text-transform:uppercase; }
+  .wrap{ max-width:1280px; margin:0 auto; padding:0 32px; }
+  @media(max-width:720px){ .wrap{ padding:0 20px; } }
+  @keyframes twinkle{ 0%,100%{ opacity:0.15; } 50%{ opacity:0.7; } }
+
+  .partners-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:20px;
+  }
+  @media(max-width:600px){
+    .partners-grid{
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+  }
+  @media(max-width:340px){
+    .partners-grid{
+      grid-template-columns:1fr;
+    }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel">
+
+// ─── Language system ──────────────────────────────────────────────────────────
+const LangContext = React.createContext({ lang:'en', setLang:()=>{} });
+function useLang(){
+  const {lang} = React.useContext(LangContext);
+  return (en, fr) => lang === 'fr' ? fr : en;
+}
+function LangLink(){
+  const {lang, setLang} = React.useContext(LangContext);
+  const next = lang === 'en' ? 'fr' : 'en';
+  const label = lang === 'en' ? 'Français' : 'English';
+  return (
+    <button onClick={() => { setLang(next); localStorage.setItem('its_lang',next); document.getElementById('html-root').lang=next; }}
+      style={{ background:'none', border:'none', cursor:'pointer', padding:0, fontSize:11, letterSpacing:'0.1em', color:'var(--cream-mute)', transition:'color 160ms', fontFamily:'inherit' }}
+      onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'}
+      onMouseLeave={e=>e.currentTarget.style.color='var(--cream-mute)'}
+    >{label}</button>
+  );
+}
+
+// ─── Shared primitives ────────────────────────────────────────────────────────
+function SectionLabel({ children, color='var(--gold)' }){
+  return <div className="label" style={{ color }}>{children}</div>;
+}
+
+function makeTornPath(seed=1,segments=18,width=1440,height=48){
+  let s=seed*9301+49297;
+  const rand=()=>{ s=(s*9301+49297)%233280; return s/233280; };
+  const step=width/segments;
+  let d=`M0,${height} L0,${height*0.55}`;
+  for(let i=0;i<=segments;i++){
+    const x=i*step,baseY=height*0.4,jitter=(rand()-0.5)*height*0.7;
+    const y=Math.max(2,Math.min(height-2,baseY+jitter));
+    if(i%3===0){ d+=` L${x.toFixed(1)},${y.toFixed(1)}`; }
+    else{ const cx=x-step*0.5,cy=y+(rand()-0.5)*14; d+=` Q${cx.toFixed(1)},${cy.toFixed(1)} ${x.toFixed(1)},${y.toFixed(1)}`; }
+  }
+  return d+` L${width},${height} Z`;
+}
+function TornEdge({ fill='#1A0B2E',seed=1,position='bottom',height=56,accent }){
+  const path=React.useMemo(()=>makeTornPath(seed,22,1440,height),[seed,height]);
+  const aPath=React.useMemo(()=>makeTornPath(seed+7,22,1440,height*0.85),[seed,height]);
+  return (
+    <div style={{ position:'absolute',left:0,right:0,[position]:-1,height,pointerEvents:'none',zIndex:4,transform:position==='top'?'scaleY(-1)':'none' }}>
+      <svg viewBox={`0 0 1440 ${height}`} preserveAspectRatio="none" style={{ width:'100%',height:'100%' }}>
+        {accent&&<path d={aPath} fill={accent} opacity="0.55" transform={`translate(0,${height*0.06})`} />}
+        <path d={path} fill={fill} />
+      </svg>
+    </div>
+  );
+}
+
+// ─── Nav ──────────────────────────────────────────────────────────────────────
+function Nav(){
+  const t = useLang();
+  const links=[
+    [t('Programme','Programme'),'programme.html'],
+    [t('Tickets','Billets'),'tickets.html'],
+    [t('The Field','Le Terrain'),'village.html'],
+    ['FAQ','faq.html'],
+    [t('Partners','Partenaires'),'partners.html'],
+    [t('Contact','Contact'),'contact.html'],
+  ];
+  const [scrolled,setScrolled]=React.useState(false);
+  React.useEffect(()=>{
+    const fn=()=>setScrolled(window.scrollY>30);
+    window.addEventListener('scroll',fn,{passive:true});
+    return ()=>window.removeEventListener('scroll',fn);
+  },[]);
+  return (
+    <nav style={{ position:'fixed',top:0,left:0,right:0,zIndex:50,transition:'background 220ms ease,backdrop-filter 220ms ease,border-color 220ms ease',background:scrolled?'rgba(26,11,46,0.82)':'transparent',backdropFilter:scrolled?'blur(14px) saturate(140%)':'none',WebkitBackdropFilter:scrolled?'blur(14px) saturate(140%)':'none',borderBottom:scrolled?'1px solid rgba(255,245,248,0.08)':'1px solid transparent' }}>
+      <div className="wrap" style={{ display:'flex',alignItems:'center',justifyContent:'space-between',height:64 }}>
+        <a href="index.html" style={{ display:'flex',alignItems:'center',gap:10 }}>
+          <span style={{ width:14,height:14,borderRadius:'50%',background:'radial-gradient(circle at 35% 35%,#FFD27A,var(--gold) 60%,#8a4a00 100%)',boxShadow:'0 0 14px rgba(224,149,0,0.7)' }} />
+          <span className="label" style={{ letterSpacing:'0.28em' }}>Into The Sunset</span>
+        </a>
+        <div style={{ display:'flex',gap:28,alignItems:'center' }}>
+          <div style={{ display:'flex',gap:24 }}>
+            {links.map(([label,href])=>(
+              <a key={href} href={href} className="label" style={{ color:'var(--cream-soft)',fontSize:11,transition:'color 160ms' }}
+                onMouseEnter={e=>e.currentTarget.style.color='var(--gold)'}
+                onMouseLeave={e=>e.currentTarget.style.color='var(--cream-soft)'}
+              >{label}</a>
+            ))}
+          </div>
+          <a href="tickets.html" style={{ background:'var(--magenta)',color:'var(--cream)',padding:'10px 18px',borderRadius:999,fontSize:12,fontWeight:600,letterSpacing:'0.14em',textTransform:'uppercase',transition:'box-shadow 200ms,transform 160ms' }}
+            onMouseEnter={e=>{ e.currentTarget.style.boxShadow='0 0 24px rgba(196,76,255,0.55)'; e.currentTarget.style.transform='translateY(-1px)'; }}
+            onMouseLeave={e=>{ e.currentTarget.style.boxShadow='none'; e.currentTarget.style.transform='translateY(0)'; }}
+          >{t('Get Tickets','Obtenir des billets')}</a>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+// ─── Stars ────────────────────────────────────────────────────────────────────
+function Stars({ count=40 }){
+  const stars=React.useMemo(()=>Array.from({length:count},()=>({x:Math.random()*100,y:Math.random()*100,s:Math.random()*1.4+0.4,d:Math.random()*5})),[count]);
+  return (
+    <div style={{ position:'absolute',inset:0 }}>
+      {stars.map((s,i)=>(
+        <div key={i} style={{ position:'absolute',left:`${s.x}%`,top:`${s.y}%`,width:s.s,height:s.s,borderRadius:'50%',background:'var(--cream)',animation:`twinkle 3.5s ease-in-out ${s.d}s infinite` }} />
+      ))}
+    </div>
+  );
+}
+
+// ─── Page Hero ────────────────────────────────────────────────────────────────
+function PageHero(){
+  const t = useLang();
+  return (
+    <section style={{ position:'relative',background:'var(--night)',padding:'140px 0 88px',overflow:'hidden',textAlign:'center' }}>
+      <div style={{ position:'absolute',inset:0,background:'linear-gradient(to bottom,#060412 0%,#1A0B2E 35%,#2D1F4F 65%,#3D1540 80%,rgba(255,217,61,0.08) 100%)' }} />
+      <div style={{ position:'absolute',inset:0,background:'radial-gradient(ellipse 70% 50% at 50% 100%,rgba(255,217,61,0.12),transparent 65%)' }} />
+      <Stars count={55} />
+      <div className="wrap" style={{ position:'relative',zIndex:1 }}>
+        <div className="label" style={{ color:'var(--gold)',marginBottom:20 }}>{t('Our Partners','Nos Partenaires')}</div>
+        <h1 className="h-serif" style={{ fontSize:'clamp(52px,9vw,120px)',margin:'0 0 20px',color:'var(--cream)' }}>
+          {t('Made','Rendu possible')} <span style={{ fontStyle:'italic',color:'var(--coral)',textShadow:'0 0 60px rgba(255,107,157,0.45)' }}>{t('possible.','ensemble.')}</span>
+        </h1>
+        <p style={{ fontSize:16,color:'var(--cream-mute)',maxWidth:520,margin:'0 auto' }}>
+          {t(
+            'The brands and organizations who help bring Into The Sunset to life.',
+            'Les marques et organisations qui contribuent à donner vie à Into The Sunset.'
+          )}
+        </p>
+      </div>
+      <TornEdge fill="var(--dusk)" accent="var(--gold)" seed={53} position="bottom" height={72} />
+    </section>
+  );
+}
+
+// ─── Partner data — swap in real names, logos, and URLs when ready ────────────
+// logo: URL to an image file, or null to show the placeholder icon
+const PARTNERS = [
+  { nameEn:'Partner Name', nameFr:'Nom du partenaire', logo:null, url:'#' },
+  { nameEn:'Partner Name', nameFr:'Nom du partenaire', logo:null, url:'#' },
+  { nameEn:'Partner Name', nameFr:'Nom du partenaire', logo:null, url:'#' },
+  { nameEn:'Partner Name', nameFr:'Nom du partenaire', logo:null, url:'#' },
+  { nameEn:'Partner Name', nameFr:'Nom du partenaire', logo:null, url:'#' },
+  { nameEn:'Partner Name', nameFr:'Nom du partenaire', logo:null, url:'#' },
+  { nameEn:'Partner Name', nameFr:'Nom du partenaire', logo:null, url:'#' },
+  { nameEn:'Partner Name', nameFr:'Nom du partenaire', logo:null, url:'#' },
+];
+
+function PartnerCard({ nameEn, nameFr, logo, url }){
+  const {lang} = React.useContext(LangContext);
+  const name = lang === 'fr' ? nameFr : nameEn;
+  const [hov, setHov] = React.useState(false);
+  const CardTag = url && url !== '#' ? 'a' : 'div';
+  const cardProps = CardTag === 'a' ? { href:url, target:'_blank', rel:'noopener noreferrer' } : {};
+
+  return (
+    <CardTag {...cardProps}
+      onMouseEnter={()=>setHov(true)}
+      onMouseLeave={()=>setHov(false)}
+      style={{
+        display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center',
+        gap:16, padding:'32px 20px',
+        background: hov ? 'rgba(255,245,248,0.05)' : 'rgba(255,245,248,0.03)',
+        border: hov ? '1px solid rgba(255,217,61,0.35)' : '1px solid rgba(255,245,248,0.1)',
+        borderRadius:16,
+        transition:'background 200ms, border-color 200ms, transform 200ms, box-shadow 200ms',
+        transform: hov ? 'translateY(-3px)' : 'none',
+        boxShadow: hov ? '0 12px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,217,61,0.1)' : 'none',
+        cursor: url && url !== '#' ? 'pointer' : 'default',
+        textDecoration:'none', color:'inherit',
+        minHeight:180,
+      }}
+    >
+      {/* Logo area */}
+      <div style={{
+        width:80, height:80,
+        borderRadius:14,
+        background:'rgba(255,245,248,0.06)',
+        border:'1px solid rgba(255,245,248,0.1)',
+        display:'flex', alignItems:'center', justifyContent:'center',
+        flexShrink:0, overflow:'hidden',
+        position:'relative',
+      }}>
+        {logo ? (
+          <img src={logo} alt={name} style={{ width:'100%', height:'100%', objectFit:'contain', padding:8 }} />
+        ) : (
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,245,248,0.22)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+            <line x1="12" y1="12" x2="12" y2="12.01"/>
+          </svg>
+        )}
+      </div>
+
+      {/* Name */}
+      <div style={{ textAlign:'center' }}>
+        <div style={{
+          fontSize:13, fontWeight:600, letterSpacing:'0.06em',
+          color: logo ? 'var(--cream-soft)' : 'rgba(255,245,248,0.28)',
+          fontStyle: logo ? 'normal' : 'italic',
+          lineHeight:1.4,
+        }}>
+          {name}
+        </div>
+        {!logo && (
+          <div className="label" style={{ fontSize:9, color:'rgba(255,217,61,0.35)', letterSpacing:'0.2em', marginTop:6 }}>
+            Coming Soon
+          </div>
+        )}
+      </div>
+    </CardTag>
+  );
+}
+
+// ─── Partners grid section ────────────────────────────────────────────────────
+function PartnersSection(){
+  const t = useLang();
+  return (
+    <section style={{ position:'relative',background:'var(--dusk)',padding:'96px 0 100px' }}>
+      <div style={{ position:'absolute',inset:0,background:'radial-gradient(ellipse 50% 40% at 50% 0%,rgba(255,217,61,0.06),transparent 60%)',pointerEvents:'none' }} />
+      <div className="wrap" style={{ position:'relative',zIndex:1 }}>
+        <div style={{ textAlign:'center',marginBottom:64 }}>
+          <SectionLabel>{t('2026 Season','Saison 2026')}</SectionLabel>
+          <h2 className="h-serif" style={{ fontSize:'clamp(28px,4vw,48px)',margin:'12px 0 16px' }}>
+            {t('Thank you to our','Merci à nos')}{' '}
+            <span style={{ fontStyle:'italic',color:'var(--coral)' }}>{t('partners.','partenaires.')}</span>
+          </h2>
+          <p style={{ fontSize:15,color:'var(--cream-mute)',maxWidth:480,margin:'0 auto',lineHeight:1.7 }}>
+            {t(
+              'Logos and names will be revealed as partnerships are confirmed.',
+              'Les logos et noms seront dévoilés au fur et à mesure que les partenariats seront confirmés.'
+            )}
+          </p>
+        </div>
+
+        <div className="partners-grid">
+          {PARTNERS.map((p,i) => (
+            <PartnerCard key={i} {...p} />
+          ))}
+        </div>
+      </div>
+      <TornEdge fill="var(--night)" accent="var(--gold)" seed={53} position="bottom" height={72} />
+    </section>
+  );
+}
+
+// ─── Become a partner CTA ─────────────────────────────────────────────────────
+function PartnerCTASection(){
+  const t = useLang();
+  return (
+    <section style={{ background:'var(--night)',padding:'96px 0' }}>
+      <div className="wrap" style={{ textAlign:'center',maxWidth:640,margin:'0 auto' }}>
+        <SectionLabel>{t('Work with us','Travaillez avec nous')}</SectionLabel>
+        <h2 className="h-serif" style={{ fontSize:'clamp(32px,4vw,56px)',margin:'10px 0 20px' }}>
+          {t('Become a','Devenez')}{' '}<span style={{ fontStyle:'italic',color:'var(--coral)' }}>{t('partner.','partenaire.')}</span>
+        </h2>
+        <p style={{ fontSize:15,color:'var(--cream-mute)',lineHeight:1.75,margin:'0 0 36px' }}>
+          {t(
+            'Interested in partnering with Into The Sunset? Reach out via Instagram or email us directly — we\'d love to talk.',
+            'Intéressé(e) à vous associer à Into The Sunset ? Contactez-nous via Instagram ou par courriel — nous serions ravis d\'en discuter.'
+          )}
+        </p>
+        <div style={{ display:'flex',gap:16,justifyContent:'center',flexWrap:'wrap' }}>
+          <a href="https://instagram.com/momentsthatlive"
+            style={{ display:'inline-flex',alignItems:'center',gap:10,background:'var(--magenta)',color:'var(--cream)',padding:'14px 24px',borderRadius:999,fontSize:12,fontWeight:600,letterSpacing:'0.14em',textTransform:'uppercase',transition:'box-shadow 200ms,transform 160ms' }}
+            onMouseEnter={e=>{ e.currentTarget.style.boxShadow='0 0 24px rgba(196,76,255,0.55)'; e.currentTarget.style.transform='translateY(-1px)'; }}
+            onMouseLeave={e=>{ e.currentTarget.style.boxShadow='none'; e.currentTarget.style.transform='none'; }}
+          >
+            @momentsthatlive
+          </a>
+          <a href="tickets.html"
+            style={{ display:'inline-flex',alignItems:'center',gap:10,border:'1.5px solid var(--gold)',color:'var(--gold)',padding:'14px 24px',borderRadius:999,fontSize:12,fontWeight:600,letterSpacing:'0.14em',textTransform:'uppercase',transition:'box-shadow 200ms,transform 160ms' }}
+            onMouseEnter={e=>{ e.currentTarget.style.boxShadow='0 0 24px rgba(255,217,61,0.22)'; e.currentTarget.style.transform='translateY(-1px)'; }}
+            onMouseLeave={e=>{ e.currentTarget.style.boxShadow='none'; e.currentTarget.style.transform='none'; }}
+          >
+            {t('Get Tickets','Obtenir des billets')}
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─── Social links — update these two URLs ────────────────────────────────────
+const INSTAGRAM_URL = 'https://www.instagram.com/festivalintothesunset';
+const TIKTOK_URL    = 'https://www.tiktok.com/@festivalintothesunset';
+
+// ─── Footer ───────────────────────────────────────────────────────────────────
+function Footer(){
+  const t = useLang();
+  const menuLinks = [
+    [t('Tickets','Billets'),'tickets.html'],
+    ['Programme','programme.html'],
+    [t('The Field','Le Terrain'),'village.html'],
+    ['FAQ','faq.html'],
+    [t('Partners','Partenaires'),'partners.html'],
+    [t('Contact','Contact'),'contact.html'],
+  ];
+  return (
+    <footer style={{ background:'var(--night)', borderTop:'1px solid rgba(224,149,0,0.3)', padding:'64px 0 32px' }}>
+      <div className="wrap">
+        <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', flexWrap:'wrap', gap:48, marginBottom:48 }}>
+          <div style={{ maxWidth:320 }}>
+            <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:16 }}>
+              <span style={{ width:12, height:12, borderRadius:'50%', background:'radial-gradient(circle at 35% 35%, #FFD27A, var(--gold) 60%, #8a4a00 100%)', boxShadow:'0 0 10px rgba(224,149,0,0.6)' }} />
+              <span className="label" style={{ letterSpacing:'0.28em', fontSize:11 }}>Into The Sunset</span>
+            </div>
+            <p className="h-serif" style={{ fontSize:16, lineHeight:1.5, letterSpacing:'0.04em', color:'var(--cream)', margin:'0 0 6px' }}>
+              {t('The last warm','La dernière soirée')}{' '}<span style={{ fontStyle:'italic', color:'var(--coral)' }}>{t('evening','chaude')}</span>{t(' of summer.',` de l'été.`)}
+            </p>
+            <p style={{ fontSize:12, color:'var(--cream-mute)', margin:0, lineHeight:1.6 }}>{t('Sept 11 & 12, 2026 · McGill Lower Field · Montréal','11 et 12 sept. 2026 · Terrain inférieur McGill · Montréal')}</p>
+          </div>
+          <div>
+            <div className="label" style={{ color:'var(--gold)', marginBottom:16, fontSize:10 }}>{t('Follow us','Suivez-nous')}</div>
+            <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"
+                style={{ display:'flex', alignItems:'center', gap:10, color:'var(--cream-mute)', fontSize:13, transition:'color 160ms' }}
+                onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'}
+                onMouseLeave={e=>e.currentTarget.style.color='var(--cream-mute)'}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+                Instagram
+              </a>
+              <a href={TIKTOK_URL} target="_blank" rel="noopener noreferrer"
+                style={{ display:'flex', alignItems:'center', gap:10, color:'var(--cream-mute)', fontSize:13, transition:'color 160ms' }}
+                onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'}
+                onMouseLeave={e=>e.currentTarget.style.color='var(--cream-mute)'}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+                TikTok
+              </a>
+            </div>
+          </div>
+          <div>
+            <div className="label" style={{ color:'var(--gold)', marginBottom:16, fontSize:10 }}>Menu</div>
+            <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:10 }}>
+              {menuLinks.map(([l,h])=>(
+                <li key={h}><a href={h} style={{ fontSize:13, color:'var(--cream-soft)', letterSpacing:'0.04em', transition:'color 160ms' }}
+                  onMouseEnter={e=>e.currentTarget.style.color='var(--gold)'}
+                  onMouseLeave={e=>e.currentTarget.style.color='var(--cream-soft)'}>{l}</a></li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div style={{ paddingTop:24, borderTop:'1px solid rgba(253,246,236,0.07)', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:16, fontSize:11, letterSpacing:'0.1em', color:'var(--cream-mute)' }}>
+          <span>© 2026 MomentsThatLive · {t('Produced in partnership with','Produit en partenariat avec')} EUS, McGill University · Montréal, QC</span>
+          <span style={{ display:'flex', gap:16, alignItems:'center' }}>
+            <a href="privacy.html" style={{ transition:'color 160ms' }} onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'} onMouseLeave={e=>e.currentTarget.style.color=''}>{t('Privacy','Confidentialité')}</a>
+            <a href="terms.html" style={{ transition:'color 160ms' }} onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'} onMouseLeave={e=>e.currentTarget.style.color=''}>{t('Terms','Modalités')}</a>
+            <a href="#" style={{ transition:'color 160ms' }} onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'} onMouseLeave={e=>e.currentTarget.style.color=''}>{t('Press','Presse')}</a>
+            <LangLink />
+          </span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+// ─── App ──────────────────────────────────────────────────────────────────────
+function App(){
+  const [lang, setLang] = React.useState(localStorage.getItem('its_lang')||'en');
+  const setLangSave = l => { setLang(l); localStorage.setItem('its_lang',l); document.getElementById('html-root').lang=l; };
+  React.useEffect(()=>{ document.getElementById('html-root').lang=lang; },[lang]);
+  return (
+    <LangContext.Provider value={{lang, setLang:setLangSave}}>
+      <Nav />
+      <PageHero />
+      <PartnersSection />
+      <PartnerCTASection />
+      <Footer />
+    </LangContext.Provider>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+<script>(function(){var root=document.getElementById('root'),done=false;function show(){if(done)return;done=true;root.classList.add('its-ready');}if(root&&root.firstChild){show();}else{var o=new MutationObserver(function(){if(root.firstChild){o.disconnect();show();}});o.observe(root,{childList:true,subtree:true});setTimeout(show,900);}document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('http')||h.startsWith('mailto')||h.startsWith('javascript')||a.target==='_blank')return;e.preventDefault();root.classList.remove('its-ready');document.body.classList.add('its-out');setTimeout(function(){location.href=h},270);});})();</script>
+<script src="cookie-consent.js"></script>
+<div id="cursor-glow" aria-hidden="true"></div>
+<style>
+#cursor-glow{position:fixed;top:0;left:0;width:500px;height:500px;border-radius:50%;pointer-events:none;z-index:9998;background:radial-gradient(circle,rgba(255,217,61,0.12) 0%,rgba(255,107,157,0.06) 40%,transparent 68%);opacity:0;transition:opacity 0.5s ease;will-change:transform;}
+@media(hover:none){#cursor-glow{display:none}}
+</style>
+<script>
+(function(){
+  var el=document.getElementById('cursor-glow');
+  var mx=0,my=0,cx=0,cy=0,on=false;
+  document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;if(!on){on=true;el.style.opacity='1';}});
+  document.addEventListener('mouseleave',function(){el.style.opacity='0';on=false;});
+  (function loop(){cx+=(mx-cx)*0.07;cy+=(my-cy)*0.07;el.style.transform='translate(calc('+cx.toFixed(1)+'px - 50%),calc('+cy.toFixed(1)+'px - 50%))';requestAnimationFrame(loop);})();
+})();
+</script>
+</body>
+</html>

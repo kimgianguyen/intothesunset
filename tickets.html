@@ -1,0 +1,1216 @@
+﻿<!doctype html>
+<html lang="en" id="html-root">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tickets — Into The Sunset · Sept 11 &amp; 12, 2026</title>
+<meta name="description" content="Get your tickets for Into The Sunset. Gold Hour Pass $35 · Sunset Pass $55. Sept 11 &amp; 12, 2026 at McGill Lower Field, Montréal. Advance tickets via Resident Advisor.">
+<meta name="theme-color" content="#0A0814">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Into The Sunset">
+<meta property="og:title" content="Tickets — Into The Sunset · Sept 11 &amp; 12, 2026">
+<meta property="og:description" content="Gold Hour Pass $35 · Sunset Pass $55. Sept 11 &amp; 12, 2026 at McGill Lower Field, Montréal. Advance tickets via Resident Advisor.">
+<meta property="og:url" content="https://kimgianguyen.github.io/intothesunset/tickets.html">
+<meta property="og:image" content="https://kimgianguyen.github.io/intothesunset/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Into The Sunset — an outdoor music festival at McGill Lower Field, Montréal · Sept 11 &amp; 12, 2026">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tickets — Into The Sunset · Sept 11 &amp; 12, 2026">
+<meta name="twitter:description" content="Gold Hour Pass $35 · Sunset Pass $55. Sept 11 &amp; 12, 2026 · McGill Lower Field, Montréal.">
+<meta name="twitter:image" content="https://kimgianguyen.github.io/intothesunset/og-image.jpg">
+<link rel="canonical" href="https://kimgianguyen.github.io/intothesunset/tickets.html">
+<style id="page-fx">@keyframes its-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}#root{opacity:0}#root.its-ready{animation:its-in .5s cubic-bezier(.22,1,.36,1) both}body.its-out #root{opacity:0;transform:translateY(-5px);transition:opacity .25s ease,transform .25s ease}body.its-out{pointer-events:none}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bowlby+One&family=Barlow+Condensed:wght@500;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Mono&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --night:#0A0814; --dusk:#1C1A3A; --plum:#2D1B6B;
+    --gold:#E09500; --coral:#F07048; --magenta:#C2185B; --cream:#FDF6EC;
+    --cream-soft:rgba(253,246,236,0.9); --cream-mute:rgba(253,246,236,0.55);
+    --serif:"Bowlby One",Georgia,serif;
+    --sans:"Inter",system-ui,sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:var(--night); color:var(--cream); font-family:var(--sans); -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; text-decoration:none; }
+  button{ font-family:inherit; cursor:pointer; border:none; background:none; color:inherit; }
+  .label{ font-family:var(--sans); font-weight:600; text-transform:uppercase; letter-spacing:0.22em; font-size:11px; }
+  .h-serif{ font-family:var(--serif); font-weight:700; line-height:0.95; letter-spacing:-0.005em; text-transform:uppercase; }
+  .wrap{ max-width:1280px; margin:0 auto; padding:0 32px; }
+  @media(max-width:720px){ .wrap{ padding:0 20px; } }
+  @keyframes twinkle{ 0%,100%{ opacity:0.15; } 50%{ opacity:0.7; } }
+  @keyframes fadeUp{ from{ opacity:0; transform:translateY(24px); } to{ opacity:1; transform:none; } }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel">
+
+// ─── Language system ──────────────────────────────────────────────────────────
+const LangContext = React.createContext({ lang:'en', setLang:()=>{} });
+function useLang(){
+  const {lang} = React.useContext(LangContext);
+  return (en, fr) => lang === 'fr' ? fr : en;
+}
+function LangLink(){
+  const {lang, setLang} = React.useContext(LangContext);
+  const next = lang === 'en' ? 'fr' : 'en';
+  const label = lang === 'en' ? 'Français' : 'English';
+  return (
+    <button onClick={() => { setLang(next); localStorage.setItem('its_lang',next); document.getElementById('html-root').lang=next; }}
+      style={{ background:'none', border:'none', cursor:'pointer', padding:0, fontSize:11, letterSpacing:'0.1em', color:'var(--cream-mute)', transition:'color 160ms', fontFamily:'inherit' }}
+      onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'}
+      onMouseLeave={e=>e.currentTarget.style.color='var(--cream-mute)'}
+    >{label}</button>
+  );
+}
+
+// ─── Ticket purchase link — update this URL when ready ───────────────────────
+const RA_URL = '#'; // TODO: replace '#' with your RA link
+
+// ─── On-sale date — change this ONE line to update the countdown everywhere ──
+const ON_SALE_DATE   = new Date('2026-08-01T10:00:00-04:00'); // Montréal EDT
+const INSTAGRAM_URL = 'https://www.instagram.com/festivalintothesunset';
+const TIKTOK_URL    = 'https://www.tiktok.com/@festivalintothesunset';
+
+// ─── CSS injection ────────────────────────────────────────────────────────────
+(function(){
+  if(document.getElementById('tickets-page-styles')) return;
+  var s=document.createElement('style');
+  s.id='tickets-page-styles';
+  s.textContent=[
+    '.bento-tickets{display:grid;grid-template-columns:62fr 38fr;gap:14px;align-items:start}',
+    '@media(max-width:900px){.bento-tickets{grid-template-columns:1fr}}',
+    '.bento-feat-body{display:flex;gap:28px;align-items:flex-start;padding:4px 24px 28px}',
+    '@media(max-width:1080px){.bento-feat-body{flex-direction:column}}',
+    '.pass-layout{display:grid;grid-template-columns:minmax(0,400px) 1fr;gap:72px;align-items:start}',
+    '@media(max-width:1024px){.pass-layout{grid-template-columns:1fr;gap:48px}}',
+    '.benefit-row{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid rgba(253,246,236,0.06)}',
+    '.benefit-row:last-child{border-bottom:none}',
+    '.price-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(253,246,236,0.07);gap:16px}',
+    '.price-row:last-child{border-bottom:none}',
+    '.policy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}',
+    '@media(max-width:900px){.policy-grid{grid-template-columns:repeat(2,1fr)}}',
+    '@media(max-width:480px){.policy-grid{grid-template-columns:1fr}}',
+  ].join('');
+  document.head.appendChild(s);
+})();
+
+// ─── Barcode ──────────────────────────────────────────────────────────────────
+function Barcode({ dark }) {
+  const bars = React.useMemo(() => Array.from({ length: 30 }, () => ({
+    w: Math.random() > 0.6 ? 3 : Math.random() > 0.4 ? 2 : 1,
+  })), []);
+  return (
+    <div style={{ flex:'1 1 auto', width:76, position:'relative', overflow:'hidden', marginTop:10, minHeight:40 }}>
+      <div style={{
+        position:'absolute', top:'50%', left:'50%',
+        height:62, width:3000,
+        transform:'translate(-50%, -50%) rotate(-90deg)',
+        display:'flex', alignItems:'center', gap:2,
+      }}>
+        {bars.map((b, i) => (
+          <span key={i} style={{ width:b.w, height:62, flexShrink:0, background: dark ? '#1a1530' : 'var(--night)', opacity:0.85 }} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── FilledCheck ──────────────────────────────────────────────────────────────
+function FilledCheck({ color }){
+  return (
+    <div style={{ width:18, height:18, borderRadius:'50%', background:color,
+      display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, marginTop:2 }}>
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+        <path d="M2 5l2.5 2.5L8 2.5" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    </div>
+  );
+}
+
+// ─── TicketStub ───────────────────────────────────────────────────────────────
+function TicketStub({ label, sub, details, cta, theme, featured, flat, ctaHref }) {
+  const [hover, setHover] = React.useState(false);
+  const isCream  = theme === 'cream';
+  const mainBg   = isCream ? 'var(--cream)' : 'linear-gradient(135deg,#E09500 0%,#F07048 60%,#C2185B 110%)';
+  const textColor= isCream ? '#1a1530' : 'var(--cream)';
+  const subColor = isCream ? 'rgba(26,21,48,0.65)' : 'rgba(253,246,236,0.85)';
+  const ctaBg    = isCream ? '#1a1530' : 'var(--night)';
+  return (
+    <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
+      style={{
+        position:'relative',
+        transform: hover ? 'translateY(-6px) scale(1.01)' : 'translateY(0) scale(1)',
+        boxShadow: hover ? '0 24px 60px rgba(0,0,0,0.65)' : '0 8px 28px rgba(0,0,0,0.45)',
+        borderRadius:14, transition:'transform 0.25s ease, box-shadow 0.25s ease',
+      }}>
+      <div style={{
+        display:'grid', gridTemplateColumns: flat ? '1fr' : '1fr 120px',
+        background:mainBg, borderRadius:14, overflow:'hidden', position:'relative',
+      }}>
+        {!flat && <>
+          <span style={{ position:'absolute', left:'calc(100% - 120px - 8px)', top:-8,    width:16, height:16, borderRadius:'50%', background:'var(--night)' }} />
+          <span style={{ position:'absolute', left:'calc(100% - 120px - 8px)', bottom:-8, width:16, height:16, borderRadius:'50%', background:'var(--night)' }} />
+        </>}
+        <div style={{ padding:'28px 28px 24px' }}>
+          <div className="label" style={{ color:subColor, fontSize:10, marginBottom:12 }}>{sub}</div>
+          <div style={{ display:'flex', alignItems:'baseline', gap:12, marginBottom:12 }}>
+            <span className="h-serif" style={{ fontSize:60, color:textColor, lineHeight:1 }}>{label}</span>
+            {featured && (
+              <span style={{ background:'var(--magenta)', color:'var(--cream)', padding:'4px 10px', borderRadius:999, fontSize:9, fontWeight:700, letterSpacing:'0.18em', textTransform:'uppercase' }}>
+                Recommended
+              </span>
+            )}
+          </div>
+          <p style={{ fontSize:13, color:subColor, margin:'0 0 20px', lineHeight:1.5 }}>{details}</p>
+          <a href={ctaHref || '#'} style={{
+            background:ctaBg, color:'var(--cream)', padding:'12px 20px', borderRadius:999,
+            fontSize:11, fontWeight:600, letterSpacing:'0.16em', textTransform:'uppercase',
+            display:'inline-flex', alignItems:'center', gap:8,
+          }}>
+            {cta} <span aria-hidden>→</span>
+          </a>
+        </div>
+        {!flat && (
+          <div style={{
+            position:'relative',
+            borderLeft:`2px dashed ${isCream ? 'rgba(26,21,48,0.25)' : 'rgba(253,246,236,0.4)'}`,
+            display:'flex', flexDirection:'column', alignItems:'center',
+            padding:'20px 0',
+          }}>
+            <div className="label" style={{ color: isCream ? 'rgba(26,21,48,0.5)' : 'rgba(253,246,236,0.65)', fontSize:9, writingMode:'vertical-rl', transform:'rotate(180deg)', letterSpacing:'0.3em', flexShrink:0 }}>
+              ITS · 09 · 11–12 · MTL
+            </div>
+            <Barcode dark={isCream} />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ─── Nav ──────────────────────────────────────────────────────────────────────
+function PageNav() {
+  const t = useLang();
+  const links=[[t('Programme','Programme'),'programme.html'],[t('Tickets','Billets'),'tickets.html'],[t('The Field','Le Terrain'),'village.html'],['FAQ','faq.html'],[t('Partners','Partenaires'),'partners.html'],[t('Contact','Contact'),'contact.html']];
+  const [scrolled, setScrolled] = React.useState(false);
+  React.useEffect(() => {
+    const fn = () => setScrolled(window.scrollY > 30);
+    window.addEventListener('scroll', fn, { passive:true });
+    return () => window.removeEventListener('scroll', fn);
+  }, []);
+  return (
+    <nav style={{
+      position:'fixed', top:0, left:0, right:0, zIndex:50,
+      transition:'background 220ms ease, backdrop-filter 220ms ease, border-color 220ms ease',
+      background: scrolled ? 'rgba(10,8,20,0.82)' : 'transparent',
+      backdropFilter: scrolled ? 'blur(14px) saturate(140%)' : 'none',
+      WebkitBackdropFilter: scrolled ? 'blur(14px) saturate(140%)' : 'none',
+      borderBottom: scrolled ? '1px solid rgba(253,246,236,0.08)' : '1px solid transparent',
+    }}>
+      <div className="wrap" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', height:64 }}>
+        <a href="index.html" style={{ display:'flex', alignItems:'center', gap:10 }}>
+          <span style={{ width:14, height:14, borderRadius:'50%', background:'radial-gradient(circle at 35% 35%,#FFD27A,var(--gold) 60%,#8a4a00 100%)', boxShadow:'0 0 14px rgba(224,149,0,0.7)' }} />
+          <span className="label" style={{ letterSpacing:'0.28em' }}>Into The Sunset</span>
+        </a>
+        <div style={{ display:'flex', gap:28, alignItems:'center' }}>
+          <div style={{ display:'flex', gap:24 }}>
+            {links.map(([label, href]) => (
+              <a key={href} href={href} className="label" style={{ color:'var(--cream-soft)', fontSize:11, transition:'color 160ms' }}
+                onMouseEnter={e => e.currentTarget.style.color = 'var(--gold)'}
+                onMouseLeave={e => e.currentTarget.style.color = 'var(--cream-soft)'}
+              >{label}</a>
+            ))}
+          </div>
+          <a href="#tickets" style={{ background:'var(--magenta)', color:'var(--cream)', padding:'10px 18px', borderRadius:999, fontSize:12, fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase', transition:'box-shadow 200ms,transform 160ms' }}
+            onMouseEnter={e => { e.currentTarget.style.boxShadow='0 0 24px rgba(194,24,91,0.55)'; e.currentTarget.style.transform='translateY(-1px)'; }}
+            onMouseLeave={e => { e.currentTarget.style.boxShadow='none'; e.currentTarget.style.transform='translateY(0)'; }}
+          >{t('Get Tickets','Obtenir des billets')}</a>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+// ─── CalendarButton ───────────────────────────────────────────────────────────
+function CalendarButton() {
+  const t = useLang();
+  const [open, setOpen] = React.useState(false);
+  const ref = React.useRef(null);
+
+  React.useEffect(() => {
+    if (!open) return;
+    const fn = e => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
+    document.addEventListener('mousedown', fn);
+    return () => document.removeEventListener('mousedown', fn);
+  }, [open]);
+
+  // Google Calendar deep link
+  // Dates: Sept 11 2026 11 AM EDT → Sept 12 2026 9 PM EDT (UTC offsets applied)
+  const googleUrl =
+    'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+    '&text=Into%20The%20Sunset' +
+    '&dates=20260911T150000Z%2F20260913T010000Z' +
+    '&details=Into%20The%20Sunset%20%E2%80%94%20McGill%20Lower%20Field%2C%20Montr%C3%A9al%20%C2%B7%20Sept%2011%20%26%2012%2C%202026.%20Gold%20Hour%20Pass%20(11%20AM%E2%80%935%20PM)%20%C2%B7%20Sunset%20Pass%20(11%20AM%E2%80%939%20PM).%20https%3A%2F%2Fkimgianguyen.github.io%2Fintothesunset%2F' +
+    '&location=McGill%20Lower%20Field%2C%20Montr%C3%A9al%2C%20QC%2C%20Canada';
+
+  function downloadIcs() {
+    const lines = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Into The Sunset//EN',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+      'BEGIN:VEVENT',
+      'DTSTART:20260911T150000Z',
+      'DTEND:20260913T010000Z',
+      'SUMMARY:Into The Sunset',
+      'DESCRIPTION:Into The Sunset — McGill Lower Field\\, Montréal · Sept 11 & 12\\, 2026.\\nGold Hour Pass (11 AM–5 PM) · Sunset Pass (11 AM–9 PM).\\nTickets: https://kimgianguyen.github.io/intothesunset/',
+      'LOCATION:McGill Lower Field\\, Montréal\\, QC\\, Canada',
+      'URL:https://kimgianguyen.github.io/intothesunset/',
+      'STATUS:CONFIRMED',
+      'END:VEVENT',
+      'END:VCALENDAR',
+    ].join('\r\n');
+    const blob = new Blob([lines], { type: 'text/calendar;charset=utf-8' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href = url; a.download = 'into-the-sunset-2026.ics';
+    document.body.appendChild(a); a.click();
+    document.body.removeChild(a); URL.revokeObjectURL(url);
+    setOpen(false);
+  }
+
+  const rowStyle = {
+    display:'flex', alignItems:'center', gap:11,
+    padding:'11px 14px', borderRadius:10,
+    fontSize:13, color:'var(--cream-soft)',
+    background:'transparent', border:'none', cursor:'pointer',
+    fontFamily:'inherit', textAlign:'left', textDecoration:'none',
+    transition:'background 160ms, color 160ms', width:'100%',
+    letterSpacing:'0.01em',
+  };
+
+  return (
+    <div ref={ref} style={{ position:'relative', display:'inline-flex' }}>
+      <button
+        onClick={() => setOpen(o => !o)}
+        style={{
+          display:'inline-flex', alignItems:'center', gap:9,
+          background:'rgba(224,149,0,0.10)',
+          border:'1px solid rgba(224,149,0,0.38)',
+          color:'var(--gold)',
+          padding:'11px 22px', borderRadius:999,
+          fontSize:11, fontWeight:600, letterSpacing:'0.16em', textTransform:'uppercase',
+          cursor:'pointer', fontFamily:'inherit',
+          transition:'background 180ms, border-color 180ms, box-shadow 180ms',
+        }}
+        onMouseEnter={e => {
+          e.currentTarget.style.background='rgba(224,149,0,0.18)';
+          e.currentTarget.style.borderColor='rgba(224,149,0,0.75)';
+          e.currentTarget.style.boxShadow='0 0 22px rgba(224,149,0,0.22)';
+        }}
+        onMouseLeave={e => {
+          e.currentTarget.style.background='rgba(224,149,0,0.10)';
+          e.currentTarget.style.borderColor='rgba(224,149,0,0.38)';
+          e.currentTarget.style.boxShadow='none';
+        }}
+      >
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+        </svg>
+        {t('Add to Calendar','Ajouter au calendrier')}
+        <svg width="9" height="9" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
+          style={{ opacity:0.6, transform:open?'rotate(180deg)':'none', transition:'transform 220ms cubic-bezier(.22,1,.36,1)' }}>
+          <path d="M2 3.5l3 3 3-3"/>
+        </svg>
+      </button>
+
+      {open && (
+        <div style={{
+          position:'absolute', top:'calc(100% + 10px)', left:'50%', transform:'translateX(-50%)',
+          background:'#1C1A3A',
+          border:'1px solid rgba(224,149,0,0.2)',
+          borderRadius:16, padding:'8px',
+          minWidth:240,
+          boxShadow:'0 24px 64px rgba(0,0,0,0.75), 0 0 0 1px rgba(224,149,0,0.06)',
+          zIndex:9999,
+        }}>
+          {/* Event header */}
+          <div style={{ padding:'10px 14px 10px', borderBottom:'1px solid rgba(253,246,236,0.07)', marginBottom:6 }}>
+            <div className="label" style={{ fontSize:9, color:'var(--gold)', letterSpacing:'0.24em' }}>✦ Into The Sunset</div>
+            <div style={{ fontSize:11, color:'var(--cream-mute)', marginTop:4, lineHeight:1.5 }}>
+              {t('Sept 11 & 12, 2026 · McGill Lower Field','11 & 12 sept. 2026 · McGill Lower Field')}
+            </div>
+          </div>
+          {/* Google Calendar */}
+          <a href={googleUrl} target="_blank" rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            style={rowStyle}
+            onMouseEnter={e => { e.currentTarget.style.background='rgba(224,149,0,0.09)'; e.currentTarget.style.color='var(--cream)'; }}
+            onMouseLeave={e => { e.currentTarget.style.background='transparent'; e.currentTarget.style.color='var(--cream-soft)'; }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect width="24" height="24" rx="5" fill="#4285F4"/>
+              <rect x="3" y="8" width="18" height="13" rx="2" fill="white"/>
+              <rect x="4.5" y="4" width="4" height="6" rx="1.5" fill="white"/>
+              <rect x="15.5" y="4" width="4" height="6" rx="1.5" fill="white"/>
+            </svg>
+            Google Calendar
+          </a>
+          <div style={{ height:1, background:'rgba(253,246,236,0.06)', margin:'2px 6px' }} />
+          {/* Apple / ICS */}
+          <button onClick={downloadIcs} style={rowStyle}
+            onMouseEnter={e => { e.currentTarget.style.background='rgba(224,149,0,0.09)'; e.currentTarget.style.color='var(--cream)'; }}
+            onMouseLeave={e => { e.currentTarget.style.background='transparent'; e.currentTarget.style.color='var(--cream-soft)'; }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect width="24" height="24" rx="5" fill="#1C1A3A" stroke="rgba(253,246,236,0.18)" strokeWidth="1"/>
+              <path d="M12 5.5c1.1-1.3 2.8-1.5 2.8-1.5s.3 1.6-1 2.9c-1.2 1.2-2.7 1-2.7 1s-.2-1.2.9-2.4z" fill="var(--cream-soft)"/>
+              <rect x="3" y="9" width="18" height="11" rx="2" fill="rgba(253,246,236,0.12)" stroke="rgba(253,246,236,0.18)" strokeWidth="1"/>
+              <path d="M7 14h10M7 17h6" stroke="var(--cream-mute)" strokeWidth="1.4" strokeLinecap="round"/>
+            </svg>
+            {t('Apple / iCal (.ics)','Apple / iCal (.ics)')}
+          </button>
+          <p style={{ fontSize:10, color:'rgba(253,246,236,0.28)', margin:'4px 14px 10px', lineHeight:1.55, letterSpacing:'0.02em' }}>
+            {t('Also works with Outlook & other calendar apps','Compatible avec Outlook & autres agendas')}
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Hero ─────────────────────────────────────────────────────────────────────
+function Hero() {
+  const t = useLang();
+  const stars = React.useMemo(() =>
+    Array.from({ length: 60 }, () => ({
+      x: Math.random() * 100, y: Math.random() * 85,
+      s: Math.random() * 1.6 + 0.3, d: Math.random() * 5,
+    })), []);
+  return (
+    <section style={{ position:'relative', background:'var(--night)', padding:'148px 0 100px', overflow:'hidden', textAlign:'center' }}>
+      <div style={{ position:'absolute', inset:0, background:'radial-gradient(ellipse 90% 70% at 50% 100%, rgba(240,112,72,0.28), rgba(45,27,107,0.35) 38%, transparent 68%)' }} />
+      <div style={{ position:'absolute', inset:0 }}>
+        {stars.map((s, i) => (
+          <div key={i} style={{ position:'absolute', left:`${s.x}%`, top:`${s.y}%`, width:s.s, height:s.s, borderRadius:'50%', background:'var(--cream)', animation:`twinkle 3.5s ease-in-out ${s.d}s infinite` }} />
+        ))}
+      </div>
+      {/* Horizon glow */}
+      <div style={{ position:'absolute', left:0, right:0, bottom:0, height:180, background:'linear-gradient(to top, rgba(240,112,72,0.12), transparent)', pointerEvents:'none' }} />
+
+      <div className="wrap" style={{ position:'relative', zIndex:1, animation:'fadeUp 1s cubic-bezier(.22,1,.36,1) 0.3s both' }}>
+        <div style={{ display:'inline-flex', alignItems:'center', gap:8, marginBottom:28 }}>
+          <span style={{ width:24, height:1, background:'var(--gold)' }} />
+          <span className="label" style={{ color:'var(--gold)' }}>EUS × MomentsThatLive</span>
+          <span style={{ width:24, height:1, background:'var(--gold)' }} />
+        </div>
+        <h1 className="h-serif" style={{ fontSize:'clamp(56px,10vw,130px)', margin:'0 0 20px', color:'var(--cream)', lineHeight:0.9 }}>
+          {t('Two ways','Deux façons')}{' '}
+          <span style={{ fontStyle:'italic', color:'var(--coral)', textShadow:'0 0 80px rgba(240,112,72,0.5)' }}>{t('in.','d\'entrer.')}</span>
+        </h1>
+        <p style={{ fontSize:17, color:'var(--cream-mute)', maxWidth:500, margin:'0 auto 40px', lineHeight:1.7 }}>
+          Into The Sunset · McGill Lower Field · {t('Sept 11 & 12, 2026','11 et 12 sept. 2026')}.<br />
+          {t('Choose your experience — the afternoon, the full night, or both.','Choisissez votre expérience — l\'après-midi, la soirée complète, ou les deux.')}
+        </p>
+        {/* Pass quick-links */}
+        <div style={{ display:'flex', flexWrap:'wrap', gap:12, justifyContent:'center' }}>
+          <a href="#gold-hour" style={{
+            display:'inline-flex', alignItems:'center', gap:8,
+            border:'1px solid rgba(224,149,0,0.45)', color:'var(--gold)',
+            padding:'12px 22px', borderRadius:999, fontSize:12, fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase',
+            transition:'background 180ms, border-color 180ms',
+          }}
+          onMouseEnter={e => { e.currentTarget.style.background='rgba(224,149,0,0.1)'; e.currentTarget.style.borderColor='rgba(224,149,0,0.7)'; }}
+          onMouseLeave={e => { e.currentTarget.style.background='transparent'; e.currentTarget.style.borderColor='rgba(224,149,0,0.45)'; }}
+          >{t('Gold Hour Pass — $35','Laissez-passer Heure Dorée — 35 $')}</a>
+          <a href="#sunset-pass" style={{
+            display:'inline-flex', alignItems:'center', gap:8,
+            background:'var(--magenta)', color:'var(--cream)',
+            padding:'12px 22px', borderRadius:999, fontSize:12, fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase',
+            boxShadow:'0 0 24px rgba(194,24,91,0.3)',
+            transition:'box-shadow 180ms, transform 160ms',
+          }}
+          onMouseEnter={e => { e.currentTarget.style.boxShadow='0 0 40px rgba(194,24,91,0.55)'; e.currentTarget.style.transform='translateY(-1px)'; }}
+          onMouseLeave={e => { e.currentTarget.style.boxShadow='0 0 24px rgba(194,24,91,0.3)'; e.currentTarget.style.transform='none'; }}
+          >✦ {t('Sunset Pass — $55','Laissez-passer Coucher de Soleil — 55 $')}</a>
+        </div>
+        {/* Event chips */}
+        <div style={{ display:'flex', flexWrap:'wrap', gap:10, justifyContent:'center', marginTop:32 }}>
+          {[t('Sept 11 & 12, 2026','11 et 12 sept. 2026'),'McGill Lower Field, Montréal',t('11 AM – 9 PM','11 h – 21 h'),t('Advance via RA','Avance via RA')].map(chip => (
+            <span key={chip} style={{ padding:'6px 14px', borderRadius:999, background:'rgba(253,246,236,0.07)', border:'1px solid rgba(253,246,236,0.1)', fontSize:11, color:'var(--cream-mute)', letterSpacing:'0.08em' }}>{chip}</span>
+          ))}
+        </div>
+      </div>
+      <div style={{ position:'absolute', left:0, right:0, bottom:0, height:1, background:'linear-gradient(90deg,transparent,rgba(253,246,236,0.1) 30%,rgba(253,246,236,0.1) 70%,transparent)' }} />
+    </section>
+  );
+}
+
+// ─── Countdown ────────────────────────────────────────────────────────────────
+function Countdown() {
+  const t = useLang();
+
+  function calc() {
+    const diff = ON_SALE_DATE - Date.now();
+    if (diff <= 0) return null;
+    const s = Math.floor(diff / 1000);
+    return {
+      days:    Math.floor(s / 86400),
+      hours:   Math.floor((s % 86400) / 3600),
+      minutes: Math.floor((s % 3600) / 60),
+      seconds: s % 60,
+    };
+  }
+
+  const [rem, setRem] = React.useState(calc);
+
+  React.useEffect(() => {
+    const id = setInterval(() => setRem(calc()), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  const saleDateStr = t(
+    ON_SALE_DATE.toLocaleDateString('en-CA', { month:'long', day:'numeric', year:'numeric' }),
+    ON_SALE_DATE.toLocaleDateString('fr-CA', { month:'long', day:'numeric', year:'numeric' })
+  );
+
+  // ── After on-sale date: swap countdown for a live CTA ──────────────────────
+  if (!rem) {
+    return (
+      <section style={{ position:'relative', background:'var(--night)', padding:'56px 0' }}>
+        <div aria-hidden="true" style={{ position:'absolute', inset:0, pointerEvents:'none', backgroundImage:'radial-gradient(rgba(253,246,236,0.06) 1px, transparent 1px)', backgroundSize:'14px 14px' }} />
+        <div className="wrap" style={{ position:'relative', zIndex:1, textAlign:'center' }}>
+          <div style={{ display:'inline-flex', alignItems:'center', gap:8, marginBottom:20 }}>
+            <span style={{ width:6, height:6, borderRadius:'50%', background:'var(--gold)', boxShadow:'0 0 8px var(--gold)', animation:'twinkle 1.5s ease-in-out infinite' }} />
+            <span className="label" style={{ color:'var(--gold)', fontSize:10 }}>
+              {t('Tickets are live now', 'Billets en vente maintenant')}
+            </span>
+          </div>
+          <h2 className="h-serif" style={{ fontSize:'clamp(36px,5vw,60px)', margin:'0 0 28px', color:'var(--cream)' }}>
+            {t('Get yours before', 'Obtenez les vôtres')}{' '}
+            <span style={{ color:'var(--coral)', fontStyle:'italic' }}>{t('they sell out.', 'avant que ça soit complet.')}</span>
+          </h2>
+          <a href={RA_URL} target="_blank" rel="noopener noreferrer" style={{
+            display:'inline-flex', alignItems:'center', gap:8,
+            background:'var(--magenta)', color:'var(--cream)',
+            padding:'14px 28px', borderRadius:999,
+            fontSize:12, fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase',
+            boxShadow:'0 0 28px rgba(194,24,91,0.35)',
+            transition:'box-shadow 200ms, transform 160ms',
+          }}
+          onMouseEnter={e => { e.currentTarget.style.boxShadow='0 0 44px rgba(194,24,91,0.6)'; e.currentTarget.style.transform='translateY(-2px)'; }}
+          onMouseLeave={e => { e.currentTarget.style.boxShadow='0 0 28px rgba(194,24,91,0.35)'; e.currentTarget.style.transform='none'; }}
+          >{t('Buy on RA', 'Acheter sur RA')} <span aria-hidden>→</span></a>
+        </div>
+      </section>
+    );
+  }
+
+  // ── Countdown active ────────────────────────────────────────────────────────
+  const pad = n => String(n).padStart(2, '0');
+  const units = [
+    { v: pad(rem.days),    l: t('Days',  'Jours') },
+    { v: pad(rem.hours),   l: t('Hours', 'Heures') },
+    { v: pad(rem.minutes), l: t('Min',   'Min') },
+    { v: pad(rem.seconds), l: t('Sec',   'Sec') },
+  ];
+
+  return (
+    <section style={{ position:'relative', background:'var(--night)', padding:'56px 0' }}>
+      {/* Dot-grid texture */}
+      <div aria-hidden="true" style={{ position:'absolute', inset:0, pointerEvents:'none', backgroundImage:'radial-gradient(rgba(253,246,236,0.06) 1px, transparent 1px)', backgroundSize:'14px 14px' }} />
+      {/* Gold horizon line */}
+      <div aria-hidden="true" style={{ position:'absolute', bottom:0, left:0, right:0, height:1, background:'linear-gradient(90deg,transparent,rgba(224,149,0,0.25) 30%,rgba(224,149,0,0.25) 70%,transparent)' }} />
+
+      <div className="wrap" style={{ position:'relative', zIndex:1, textAlign:'center' }}>
+
+        {/* Overline label */}
+        <div style={{ display:'inline-flex', alignItems:'center', gap:10, marginBottom:32 }}>
+          <span style={{ width:20, height:1, background:'var(--gold)', opacity:0.5 }} />
+          <span className="label" style={{ color:'var(--gold)', fontSize:10 }}>
+            {t('Tickets on sale', 'Billets en vente')} · {saleDateStr}
+          </span>
+          <span style={{ width:20, height:1, background:'var(--gold)', opacity:0.5 }} />
+        </div>
+
+        {/* Number blocks */}
+        <div style={{ display:'flex', justifyContent:'center', alignItems:'center', gap:8, flexWrap:'wrap' }}>
+          {units.map(({ v, l }, i) => (
+            <React.Fragment key={l}>
+              <div style={{
+                background:'rgba(253,246,236,0.04)',
+                border:'1px solid rgba(253,246,236,0.09)',
+                borderRadius:14,
+                padding:'20px 28px 16px',
+                minWidth:96,
+                textAlign:'center',
+              }}>
+                <div className="h-serif" style={{
+                  fontSize:'clamp(52px,7vw,80px)',
+                  color:'var(--cream)',
+                  lineHeight:1,
+                  fontVariantNumeric:'tabular-nums',
+                  letterSpacing:'-0.02em',
+                }}>
+                  {v}
+                </div>
+                <div className="label" style={{ fontSize:9, color:'var(--cream-mute)', marginTop:10, letterSpacing:'0.2em' }}>
+                  {l}
+                </div>
+              </div>
+              {i < 3 && (
+                <span className="h-serif" style={{
+                  fontSize:'clamp(36px,5vw,56px)',
+                  color:'var(--gold)',
+                  opacity:0.35,
+                  lineHeight:1,
+                  marginBottom:20,
+                  userSelect:'none',
+                  flexShrink:0,
+                }}>:</span>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+
+        {/* Sub-label */}
+        <p style={{ fontSize:12, color:'var(--cream-mute)', margin:'28px 0 0', letterSpacing:'0.04em' }}>
+          {t('Into The Sunset · McGill Lower Field · Sept 11 & 12, 2026','Into The Sunset · Terrain inférieur McGill · 11 et 12 sept. 2026')}
+        </p>
+
+      </div>
+    </section>
+  );
+}
+
+// ─── BentoTickets (quick overview) ────────────────────────────────────────────
+function BentoTickets(){
+  const t = useLang();
+  const sunsetBenefits = [
+    t('Everything included in the Gold Hour Pass','Tout ce qui est inclus dans le Laissez-passer Heure Dorée'),
+    t('DJ Closing Set — 5 PM to 9 PM on the main stage','Set DJ de clôture — 17 h à 21 h sur la scène principale'),
+    t('Full stage production with professional sound & lighting rig','Production scénique complète avec son et éclairage professionnels'),
+    t('MC shoutouts, live crowd moments & surprise segments','Annonces MC, moments en direct & segments surprise'),
+    t('Priority entry to the main stage zone at 5 PM','Entrée prioritaire à la zone scène principale à 17 h'),
+    t('Bar service continues through the full DJ set','Service bar continu pendant tout le set DJ'),
+    t('Guaranteed entry — no walk-up risk on a sold-out night','Entrée garantie — aucun risque de refus lors d\'une soirée à guichets fermés'),
+  ];
+  const goldBenefits = [
+    t('Full access to the Activation Zone — 11 AM to 5 PM','Accès complet à la Zone d\'activation — 11 h à 17 h'),
+    t('Brand stations & curated product sampling','Kiosques de marques & échantillonnage de produits sélectionnés'),
+    t('Pop-up market featuring local Montréal makers','Marché éphémère avec des artisans locaux de Montréal'),
+    t('Tattoo flash station — walk-ins welcome all afternoon','Atelier de tatouage flash — sans rendez-vous toute l\'après-midi'),
+    t('Photo booth & instant print keepsakes','Cabine photo & impressions souvenirs instantanées'),
+    t('Cocktail bar access (19+ with valid government-issued ID)','Accès au bar à cocktails (18+ avec pièce d\'identité valide)'),
+    t('Lawn games & open social lounge on the Lower Field','Jeux de pelouse & lounge social ouvert sur le Terrain inférieur'),
+  ];
+  return (
+    <section id="tickets" style={{ position:'relative', background:'var(--night)', padding:'120px 0', overflow:'hidden' }}>
+      <div aria-hidden="true" style={{
+        position:'absolute', inset:0, pointerEvents:'none',
+        backgroundImage:'radial-gradient(rgba(253,246,236,0.06) 1px, transparent 1px)',
+        backgroundSize:'14px 14px',
+      }} />
+      <div className="wrap" style={{ position:'relative', zIndex:1 }}>
+        <div style={{ textAlign:'center', marginBottom:56 }}>
+          <div className="label" style={{ color:'var(--coral)', marginBottom:10 }}>{t('Quick overview','Aperçu rapide')}</div>
+          <h2 className="h-serif" style={{ fontSize:'clamp(40px,5vw,72px)', margin:'0 0 14px' }}>{t('Get Tickets','Obtenir des billets')}</h2>
+          <p style={{ color:'var(--cream-mute)', fontSize:15, maxWidth:520, margin:'0 auto' }}>
+            {t('Choose your experience. Advance purchase via RA — limited capacity on the Sunset Pass.','Choisissez votre expérience. Achat à l\'avance via RA — capacité limitée pour le Laissez-passer Coucher de Soleil.')}
+          </p>
+        </div>
+        <div className="bento-tickets">
+          <div style={{ position:'relative', background:'rgba(28,26,58,0.92)', border:'1px solid rgba(253,246,236,0.1)', borderRadius:18, overflow:'hidden' }}>
+            <div aria-hidden="true" style={{ position:'absolute', top:0, left:0, right:0, height:'60%', pointerEvents:'none', backgroundImage:'linear-gradient(rgba(253,246,236,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(253,246,236,0.05) 1px, transparent 1px)', backgroundSize:'24px 24px', WebkitMaskImage:'linear-gradient(to bottom, white, transparent)', maskImage:'linear-gradient(to bottom, white, transparent)' }} />
+            <div aria-hidden="true" style={{ position:'absolute', top:0, left:0, right:0, height:260, pointerEvents:'none', background:'radial-gradient(ellipse 55% 100% at 35% 0%, rgba(240,112,72,0.14), transparent 70%)' }} />
+            <div style={{ position:'relative', display:'flex', alignItems:'center', flexWrap:'wrap', gap:10, padding:'20px 24px' }}>
+              <span style={{ background:'rgba(253,246,236,0.1)', color:'var(--cream-soft)', padding:'6px 14px', borderRadius:999, fontSize:10, fontWeight:700, letterSpacing:'0.2em', textTransform:'uppercase' }}>{t('Sunset Pass','Laissez-passer Coucher de Soleil')}</span>
+              <span style={{ display:'inline-flex', alignItems:'center', gap:5, border:'1px solid rgba(194,24,91,0.5)', background:'rgba(194,24,91,0.12)', color:'var(--coral)', padding:'6px 14px', borderRadius:999, fontSize:10, fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase' }}>✦ {t('Most Recommended','Le plus recommandé')}</span>
+              <a href={RA_URL} target="_blank" rel="noopener noreferrer" style={{ marginLeft:'auto', background:'var(--magenta)', color:'var(--cream)', padding:'11px 22px', borderRadius:999, fontSize:11, fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase', display:'inline-flex', alignItems:'center', gap:8, boxShadow:'0 0 24px rgba(194,24,91,0.35)', transition:'box-shadow 200ms, transform 160ms' }}
+              onMouseEnter={e => { e.currentTarget.style.boxShadow='0 0 40px rgba(194,24,91,0.6)'; e.currentTarget.style.transform='translateY(-1px)'; }}
+              onMouseLeave={e => { e.currentTarget.style.boxShadow='0 0 24px rgba(194,24,91,0.35)'; e.currentTarget.style.transform='translateY(0)'; }}
+              >{t('Buy on RA','Acheter sur RA')} <span aria-hidden>→</span></a>
+            </div>
+            <div className="bento-feat-body">
+              <div style={{ flex:'0 0 auto', width:'100%', maxWidth:380 }}>
+                <TicketStub label="$55" sub={t('Sunset Pass','Laissez-passer Coucher de Soleil')} details={t('Full day access · DJ closing set · Advance via RA','Accès journée · Set DJ de clôture · Avance via RA')} cta={t('Buy ticket — $55','Acheter le billet — 55 $')} theme="sunset" featured={true} ctaHref={RA_URL} />
+                <div style={{ marginTop:18, display:'flex', alignItems:'baseline', gap:8 }}>
+                  <span className="h-serif" style={{ fontSize:48, color:'var(--coral)', lineHeight:1 }}>$55</span>
+                  <span style={{ fontSize:13, color:'var(--cream-mute)' }}>{t('advance via RA','avance via RA')}</span>
+                </div>
+              </div>
+              <div style={{ flex:'1 1 0' }}>
+                <div className="label" style={{ color:'var(--coral)', fontSize:10, marginBottom:16 }}>{t('What\'s included','Ce qui est inclus')}</div>
+                <ul style={{ listStyle:'none', margin:0, padding:0, display:'flex', flexDirection:'column', gap:11 }}>
+                  {sunsetBenefits.map((b, i) => (
+                    <li key={i} style={{ display:'flex', alignItems:'flex-start', gap:11 }}>
+                      <FilledCheck color="var(--coral)" />
+                      <span style={{ fontSize:13, color:'var(--cream-soft)', lineHeight:1.55 }}>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div style={{ marginTop:20, padding:'13px 16px', background:'rgba(194,24,91,0.1)', borderRadius:10, border:'1px solid rgba(194,24,91,0.22)' }}>
+                  <p style={{ margin:0, fontSize:12, color:'var(--cream-soft)', lineHeight:1.6 }}>
+                    <strong style={{ color:'var(--magenta)' }}>{t('Limited capacity.','Capacité limitée.')}</strong> {t('Advance Sunset Pass via RA is the only guaranteed way in. The Gold Hour Pass does not include the DJ set.','Le Laissez-passer Coucher de Soleil en avance via RA est la seule façon garantie d\'entrer. Le Laissez-passer Heure Dorée n\'inclut pas le set DJ.')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style={{ position:'relative', background:'rgba(10,8,20,0.96)', border:'1px solid rgba(253,246,236,0.09)', borderRadius:18, overflow:'hidden' }}>
+            <div aria-hidden="true" style={{ position:'absolute', top:0, right:0, width:200, height:200, pointerEvents:'none', background:'radial-gradient(circle at 100% 0%, rgba(224,149,0,0.1), transparent 65%)' }} />
+            <div style={{ position:'relative', display:'flex', alignItems:'center', flexWrap:'wrap', gap:10, padding:'20px 24px' }}>
+              <span style={{ background:'rgba(253,246,236,0.09)', color:'var(--cream-soft)', padding:'6px 14px', borderRadius:999, fontSize:10, fontWeight:700, letterSpacing:'0.2em', textTransform:'uppercase' }}>{t('Gold Hour Pass','Laissez-passer Heure Dorée')}</span>
+              <a href={RA_URL} target="_blank" rel="noopener noreferrer" style={{ marginLeft:'auto', border:'1px solid rgba(224,149,0,0.5)', color:'var(--gold)', background:'transparent', padding:'10px 18px', borderRadius:999, fontSize:11, fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', transition:'background 180ms' }}
+              onMouseEnter={e => { e.currentTarget.style.background='rgba(224,149,0,0.15)'; }}
+              onMouseLeave={e => { e.currentTarget.style.background='transparent'; }}
+              >{t('Buy $35','Acheter 35 $')}</a>
+            </div>
+            <div style={{ position:'relative', padding:'0 24px 16px' }}>
+              <TicketStub label="$35" sub={t('Gold Hour Pass','Laissez-passer Heure Dorée')} details={t('Activation Zone · 11 AM – 5 PM · Advance via RA','Zone d\'activation · 11 h – 17 h · Avance via RA')} cta={t('Buy ticket — $35','Acheter le billet — 35 $')} theme="cream" ctaHref={RA_URL} />
+            </div>
+            <div style={{ padding:'4px 24px 16px', display:'flex', alignItems:'baseline', gap:8 }}>
+              <span className="h-serif" style={{ fontSize:48, color:'var(--gold)', lineHeight:1 }}>$35</span>
+              <span style={{ fontSize:13, color:'var(--cream-mute)' }}>{t('advance via RA','avance via RA')}</span>
+            </div>
+            <div style={{ padding:'0 24px 28px' }}>
+              <div className="label" style={{ color:'var(--gold)', fontSize:10, marginBottom:14 }}>{t('What\'s included','Ce qui est inclus')}</div>
+              <ul style={{ listStyle:'none', margin:0, padding:0, display:'flex', flexDirection:'column', gap:10 }}>
+                {goldBenefits.map((b, i) => (
+                  <li key={i} style={{ display:'flex', alignItems:'flex-start', gap:10 }}>
+                    <FilledCheck color="var(--gold)" />
+                    <span style={{ fontSize:12, color:'var(--cream-soft)', lineHeight:1.55 }}>{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style={{ textAlign:'center', marginTop:40 }}>
+          <p style={{ color:'var(--cream-mute)', fontSize:13, margin:'0 0 18px' }}>
+            {t('McGill students get express lane entry with student card at the gate. Tickets available now on RA.','Les étudiant(e)s McGill bénéficient d\'une entrée prioritaire avec leur carte étudiante. Billets disponibles maintenant sur RA.')}
+          </p>
+          <div style={{ display:'flex', gap:16, justifyContent:'center', flexWrap:'wrap' }}>
+            <a href="#gold-hour" style={{ fontSize:11, fontWeight:600, letterSpacing:'0.16em', textTransform:'uppercase', color:'var(--gold)', borderBottom:'1px solid rgba(224,149,0,0.3)', paddingBottom:3, transition:'color 160ms, border-color 160ms' }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor='var(--gold)'; }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor='rgba(224,149,0,0.3)'; }}
+            >{t('Gold Hour details ↓','Détails Heure Dorée ↓')}</a>
+            <a href="#sunset-pass" style={{ fontSize:11, fontWeight:600, letterSpacing:'0.16em', textTransform:'uppercase', color:'var(--coral)', borderBottom:'1px solid rgba(240,112,72,0.3)', paddingBottom:3, transition:'border-color 160ms' }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor='var(--coral)'; }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor='rgba(240,112,72,0.3)'; }}
+            >{t('Sunset Pass details ↓','Détails Laissez-passer Coucher de Soleil ↓')}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─── GoldHourSection ──────────────────────────────────────────────────────────
+function GoldHourSection() {
+  const t = useLang();
+  const benefits = [
+    { icon:'◎', text:t('Full access to the Activation Zone — 11 AM to 5 PM','Accès complet à la Zone d\'activation — 11 h à 17 h'), bold:true },
+    { icon:'◉', text:t('Brand stations & curated product sampling','Kiosques de marques & échantillonnage de produits sélectionnés') },
+    { icon:'◉', text:t('Pop-up market featuring local Montréal makers','Marché éphémère avec des artisans locaux de Montréal') },
+    { icon:'◉', text:t('Tattoo flash station — walk-ins welcome all afternoon','Atelier de tatouage flash — sans rendez-vous toute l\'après-midi') },
+    { icon:'◉', text:t('Photo booth & instant print keepsakes','Cabine photo & impressions souvenirs instantanées') },
+    { icon:'◉', text:t('Cocktail bar access (19+ with valid government-issued ID)','Accès au bar à cocktails (18+ avec pièce d\'identité valide)') },
+    { icon:'◉', text:t('Lawn games & open social lounge on the Lower Field','Jeux de pelouse & lounge social ouvert sur le Terrain inférieur') },
+  ];
+  return (
+    <section id="gold-hour" style={{ position:'relative', background:'var(--night)', padding:'100px 0 112px', borderTop:'1px solid rgba(224,149,0,0.18)' }}>
+      {/* Ambient glow top-left */}
+      <div aria-hidden="true" style={{ position:'absolute', top:0, left:0, width:480, height:400, pointerEvents:'none', background:'radial-gradient(ellipse 60% 60% at 0% 0%, rgba(224,149,0,0.07), transparent 70%)' }} />
+      <div className="wrap" style={{ position:'relative', zIndex:1 }}>
+
+        {/* Section label */}
+        <div style={{ display:'flex', alignItems:'center', gap:16, marginBottom:52 }}>
+          <span style={{ width:36, height:2, background:'var(--gold)', borderRadius:2 }} />
+          <span className="label" style={{ color:'var(--gold)' }}>{t('Pass 01 — Activation Zone','Laissez-passer 01 — Zone d\'activation')}</span>
+        </div>
+
+        <div className="pass-layout">
+
+          {/* Left: ticket + price + quick CTA */}
+          <div style={{ position:'sticky', top:88 }}>
+            <TicketStub
+              label="$35"
+              sub={t('Gold Hour Pass','Laissez-passer Heure Dorée')}
+              details={t('Activation Zone · 11 AM – 5 PM · Advance via RA','Zone d\'activation · 11 h – 17 h · Avance via RA')}
+              cta={t('Buy ticket — $35','Acheter le billet — 35 $')}
+              theme="cream"
+              ctaHref={RA_URL}
+            />
+            <div style={{ marginTop:24, display:'flex', alignItems:'baseline', gap:10 }}>
+              <span className="h-serif" style={{ fontSize:52, color:'var(--gold)', lineHeight:1 }}>$35</span>
+              <span style={{ fontSize:14, color:'var(--cream-mute)' }}>advance via RA</span>
+            </div>
+            <div style={{ marginTop:16, display:'flex', flexDirection:'column', gap:8 }}>
+              <div style={{ display:'flex', alignItems:'center', gap:10, fontSize:13, color:'var(--cream-soft)' }}>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="var(--gold)" strokeWidth="1.3"/><path d="M7 4v3.5l2 2" stroke="var(--gold)" strokeWidth="1.3" strokeLinecap="round"/></svg>
+                {t('11 AM – 5 PM · September 11 & 12','11 h – 17 h · 11 et 12 septembre')}
+              </div>
+              <div style={{ display:'flex', alignItems:'center', gap:10, fontSize:13, color:'var(--cream-soft)' }}>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5C4.5 1.5 2.5 3.5 2.5 6c0 3.5 4.5 6.5 4.5 6.5s4.5-3 4.5-6.5c0-2.5-2-4.5-4.5-4.5z" stroke="var(--gold)" strokeWidth="1.3"/><circle cx="7" cy="6" r="1.3" fill="var(--gold)"/></svg>
+                McGill Lower Field, Montréal
+              </div>
+              <div style={{ display:'flex', alignItems:'center', gap:10, fontSize:13, color:'var(--cream-soft)' }}>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="3" width="10" height="9" rx="1.5" stroke="var(--gold)" strokeWidth="1.3"/><path d="M5 2v2M9 2v2M2 6.5h10" stroke="var(--gold)" strokeWidth="1.3" strokeLinecap="round"/></svg>
+                {t('All ages — 19+ for bar access','Tous âges — 18+ pour l\'accès au bar')}
+              </div>
+            </div>
+            <a href={RA_URL} target="_blank" rel="noopener noreferrer" style={{
+              display:'inline-flex', alignItems:'center', gap:10,
+              marginTop:28, background:'var(--gold)', color:'var(--night)',
+              padding:'15px 28px', borderRadius:999,
+              fontSize:12, fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase',
+              transition:'box-shadow 200ms, transform 160ms',
+            }}
+            onMouseEnter={e => { e.currentTarget.style.boxShadow='0 0 32px rgba(224,149,0,0.5)'; e.currentTarget.style.transform='translateY(-2px)'; }}
+            onMouseLeave={e => { e.currentTarget.style.boxShadow='none'; e.currentTarget.style.transform='none'; }}
+            >{t('Buy on RA','Acheter sur RA')} <span aria-hidden>→</span></a>
+          </div>
+
+          {/* Right: description + benefits + pricing */}
+          <div>
+            <h2 className="h-serif" style={{ fontSize:'clamp(40px,5vw,72px)', margin:'0 0 12px', color:'var(--cream)' }}>
+              {t('Gold Hour','Heure Dorée')}<br />
+              <span style={{ color:'var(--gold)', fontStyle:'italic' }}>{t('Pass','Laissez-passer')}</span>
+            </h2>
+            <p style={{ fontSize:16, color:'var(--cream-soft)', lineHeight:1.8, margin:'0 0 40px', maxWidth:560 }}>
+              {t('Your afternoon starts at 11. The field opens slowly — brand stations powering up the Activation Zone, makers arranging their market stalls, the first cocktails being poured. By noon the Lower Field is alive. Gold Hour Pass holders move freely across every activation from open to close at 5 PM. No rush, no pressure — the whole afternoon is yours.','Votre après-midi commence à 11 h. Le terrain s\'ouvre lentement — les kiosques de marques alimentent la Zone d\'activation, les artisans arrangent leurs étals, les premiers cocktails sont versés. À midi, le Terrain inférieur est vivant. Les détenteurs du Laissez-passer Heure Dorée circulent librement dans chaque activation de l\'ouverture jusqu\'à la fermeture à 17 h. Sans précipitation, sans pression — tout l\'après-midi vous appartient.')}
+            </p>
+
+            {/* Benefits */}
+            <div style={{ marginBottom:40 }}>
+              <div className="label" style={{ color:'var(--gold)', marginBottom:4, fontSize:10 }}>{t('What\'s included','Ce qui est inclus')}</div>
+              <div style={{ marginTop:16 }}>
+                {benefits.map((b, i) => (
+                  <div key={i} className="benefit-row">
+                    <FilledCheck color="var(--gold)" />
+                    <span style={{ fontSize:14, color: b.bold ? 'var(--cream)' : 'var(--cream-soft)', lineHeight:1.55, fontWeight: b.bold ? 500 : 400 }}>{b.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Pricing table */}
+            <div style={{ background:'rgba(253,246,236,0.04)', border:'1px solid rgba(253,246,236,0.08)', borderRadius:14, padding:'6px 22px 2px', marginBottom:28 }}>
+              <div className="label" style={{ color:'var(--gold)', fontSize:9, padding:'12px 0 6px' }}>{t('Pricing','Tarifs')}</div>
+              <div className="price-row">
+                <div>
+                  <div style={{ fontSize:14, color:'var(--cream)', fontWeight:500 }}>{t('General · Advance via RA','Général · Avance via RA')}</div>
+                  <div style={{ fontSize:12, color:'var(--cream-mute)', marginTop:3 }}>{t('All ages · Activation Zone · 11 AM – 5 PM','Tous âges · Zone d\'activation · 11 h – 17 h')}</div>
+                </div>
+                <div style={{ textAlign:'right' }}>
+                  <div className="h-serif" style={{ fontSize:28, color:'var(--gold)', whiteSpace:'nowrap' }}>$35</div>
+                  <div style={{ fontSize:10, color:'var(--cream-mute)' }}>+ {t('fees','frais')}</div>
+                </div>
+              </div>
+              <div className="price-row">
+                <div>
+                  <div style={{ fontSize:14, color:'var(--cream)', fontWeight:500 }}>{t('McGill Students · Express Lane','Étudiant(e)s McGill · File rapide')}</div>
+                  <div style={{ fontSize:12, color:'var(--cream-mute)', marginTop:3 }}>{t('Same price · Student card at gate for express entry','Même prix · Carte étudiante à l\'entrée pour accès rapide')}</div>
+                </div>
+                <div style={{ textAlign:'right' }}>
+                  <div className="h-serif" style={{ fontSize:28, color:'var(--gold)', whiteSpace:'nowrap' }}>$35</div>
+                  <div style={{ fontSize:10, color:'var(--cream-mute)' }}>+ {t('fees','frais')}</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Note */}
+            <div style={{ padding:'15px 18px', background:'rgba(224,149,0,0.07)', borderRadius:10, border:'1px solid rgba(224,149,0,0.18)' }}>
+              <p style={{ margin:0, fontSize:13, color:'var(--cream-soft)', lineHeight:1.65 }}>
+                <strong style={{ color:'var(--gold)' }}>{t('Advance purchase required.','Achat à l\'avance requis.')}</strong> {t('Gold Hour Passes are sold via RA. Show your confirmation at the gate any time after 11 AM. Wristband required for bar access (19+ with valid government-issued ID).','Les Laissez-passer Heure Dorée sont vendus via RA. Montrez votre confirmation à l\'entrée à partir de 11 h. Bracelet requis pour l\'accès au bar (18+ avec pièce d\'identité valide).')}
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─── SunsetPassSection ────────────────────────────────────────────────────────
+function SunsetPassSection() {
+  const t = useLang();
+  const exclusiveBenefits = [
+    { text:t('DJ Closing Set — 5 PM to 9 PM on the main stage','Set DJ de clôture — 17 h à 21 h sur la scène principale'), bold:true },
+    { text:t('Full stage production with professional sound & lighting rig','Production scénique complète avec son et éclairage professionnels') },
+    { text:t('MC shoutouts, live crowd moments & surprise segments','Annonces MC, moments en direct & segments surprise') },
+    { text:t('Priority entry to the main stage zone at 5 PM','Entrée prioritaire à la zone scène principale à 17 h') },
+    { text:t('Bar service continues through the full DJ set','Service bar continu pendant tout le set DJ') },
+    { text:t('Guaranteed entry — no walk-up risk on a sold-out night','Entrée garantie — aucun risque de refus lors d\'une soirée à guichets fermés') },
+  ];
+  return (
+    <section id="sunset-pass" style={{ position:'relative', background:'var(--dusk)', padding:'100px 0 112px', borderTop:'1px solid rgba(240,112,72,0.2)' }}>
+      {/* Ambient coral glow */}
+      <div aria-hidden="true" style={{ position:'absolute', top:0, right:0, width:600, height:500, pointerEvents:'none', background:'radial-gradient(ellipse 60% 60% at 100% 0%, rgba(240,112,72,0.1), transparent 70%)' }} />
+      <div aria-hidden="true" style={{ position:'absolute', bottom:0, left:0, right:0, height:300, pointerEvents:'none', background:'radial-gradient(ellipse 80% 100% at 50% 100%, rgba(194,24,91,0.08), transparent 70%)' }} />
+
+      <div className="wrap" style={{ position:'relative', zIndex:1 }}>
+
+        {/* Section label */}
+        <div style={{ display:'flex', alignItems:'center', gap:16, marginBottom:52 }}>
+          <span style={{ width:36, height:2, background:'var(--coral)', borderRadius:2 }} />
+          <span className="label" style={{ color:'var(--coral)' }}>{t('Pass 02 — Full Day + DJ Set','Laissez-passer 02 — Journée complète + Set DJ')}</span>
+        </div>
+
+        <div className="pass-layout">
+
+          {/* Left: ticket + price + CTA */}
+          <div style={{ position:'sticky', top:88 }}>
+            <TicketStub
+              label="$55"
+              sub={t('Sunset Pass','Laissez-passer Coucher de Soleil')}
+              details={t('Full day access · DJ closing set · Advance via RA','Accès journée · Set DJ de clôture · Avance via RA')}
+              cta={t('Buy ticket — $55','Acheter le billet — 55 $')}
+              theme="sunset"
+              featured={true}
+              ctaHref={RA_URL}
+            />
+            <div style={{ marginTop:24, display:'flex', alignItems:'baseline', gap:10 }}>
+              <span className="h-serif" style={{ fontSize:52, color:'var(--coral)', lineHeight:1 }}>$55</span>
+              <span style={{ fontSize:14, color:'var(--cream-mute)' }}>advance via RA</span>
+            </div>
+            <div style={{ marginTop:16, display:'flex', flexDirection:'column', gap:8 }}>
+              <div style={{ display:'flex', alignItems:'center', gap:10, fontSize:13, color:'var(--cream-soft)' }}>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="var(--coral)" strokeWidth="1.3"/><path d="M7 4v3.5l2 2" stroke="var(--coral)" strokeWidth="1.3" strokeLinecap="round"/></svg>
+                {t('11 AM – 9 PM · September 11 & 12','11 h – 21 h · 11 et 12 septembre')}
+              </div>
+              <div style={{ display:'flex', alignItems:'center', gap:10, fontSize:13, color:'var(--cream-soft)' }}>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12l1.5-4L7 2l3.5 6L12 12H2z" stroke="var(--coral)" strokeWidth="1.3" strokeLinejoin="round"/><path d="M7 8v3" stroke="var(--coral)" strokeWidth="1.3" strokeLinecap="round"/></svg>
+                {t('Main stage · DJ closing set from 5 PM','Scène principale · Set DJ de clôture à partir de 17 h')}
+              </div>
+              <div style={{ display:'flex', alignItems:'center', gap:10, fontSize:13, color:'var(--cream-soft)' }}>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="var(--coral)" strokeWidth="1.3"/><path d="M7 4.5V7l1.5 1.5" stroke="var(--coral)" strokeWidth="1.3" strokeLinecap="round"/></svg>
+                {t('Limited capacity — advance only','Capacité limitée — avance seulement')}
+              </div>
+            </div>
+            <a href={RA_URL} target="_blank" rel="noopener noreferrer" style={{
+              display:'inline-flex', alignItems:'center', gap:10,
+              marginTop:28, background:'var(--magenta)', color:'var(--cream)',
+              padding:'15px 28px', borderRadius:999,
+              fontSize:12, fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase',
+              boxShadow:'0 0 28px rgba(194,24,91,0.35)',
+              transition:'box-shadow 200ms, transform 160ms',
+            }}
+            onMouseEnter={e => { e.currentTarget.style.boxShadow='0 0 44px rgba(194,24,91,0.6)'; e.currentTarget.style.transform='translateY(-2px)'; }}
+            onMouseLeave={e => { e.currentTarget.style.boxShadow='0 0 28px rgba(194,24,91,0.35)'; e.currentTarget.style.transform='none'; }}
+            >{t('Buy on RA','Acheter sur RA')} <span aria-hidden>→</span></a>
+          </div>
+
+          {/* Right: description + benefits + pricing */}
+          <div>
+            <h2 className="h-serif" style={{ fontSize:'clamp(40px,5vw,72px)', margin:'0 0 12px', color:'var(--cream)' }}>
+              {t('Sunset','Coucher de Soleil')}<br />
+              <span style={{ color:'var(--coral)', fontStyle:'italic' }}>{t('Pass','Laissez-passer')}</span>
+            </h2>
+            <p style={{ fontSize:16, color:'var(--cream-soft)', lineHeight:1.8, margin:'0 0 32px', maxWidth:560 }}>
+              {t('The Gold Hour experience, and then some. When the sun begins to drop and the light turns gold, Sunset Pass holders move to the front. The DJ closes with a full production set from 5 PM to 9 PM — professional sound rig, lighting, MC moments, and a field that doesn\'t stop until the last track. This is the full Into The Sunset experience.','L\'expérience Heure Dorée, et plus encore. Quand le soleil commence à descendre et que la lumière devient dorée, les détenteurs du Laissez-passer Coucher de Soleil passent en avant. Le DJ clôture avec un set de production complète de 17 h à 21 h — son professionnel, éclairage, moments MC et un terrain qui ne s\'arrête pas avant le dernier titre. C\'est l\'expérience complète Into The Sunset.')}
+            </p>
+
+            {/* "Includes everything in Gold Hour" callout */}
+            <div style={{ display:'flex', alignItems:'center', gap:12, padding:'14px 18px', background:'rgba(224,149,0,0.08)', borderRadius:10, border:'1px solid rgba(224,149,0,0.2)', marginBottom:32 }}>
+              <FilledCheck color="var(--gold)" />
+              <span style={{ fontSize:14, color:'var(--cream-soft)', lineHeight:1.5 }}>
+                <strong style={{ color:'var(--gold)' }}>{t('Includes everything in the Gold Hour Pass','Inclut tout ce qui est dans le Laissez-passer Heure Dorée')}</strong> — {t('full Activation Zone access from 11 AM plus all activations, market, bar, and lawn through 5 PM.','accès complet à la Zone d\'activation dès 11 h plus toutes les activations, marché, bar et terrain jusqu\'à 17 h.')}
+              </span>
+            </div>
+
+            {/* Exclusive benefits */}
+            <div style={{ marginBottom:40 }}>
+              <div className="label" style={{ color:'var(--coral)', marginBottom:4, fontSize:10 }}>{t('Plus, exclusively in this pass','En plus, exclusivement dans ce laissez-passer')}</div>
+              <div style={{ marginTop:16 }}>
+                {exclusiveBenefits.map((b, i) => (
+                  <div key={i} className="benefit-row">
+                    <FilledCheck color="var(--coral)" />
+                    <span style={{ fontSize:14, color: b.bold ? 'var(--cream)' : 'var(--cream-soft)', lineHeight:1.55, fontWeight: b.bold ? 500 : 400 }}>{b.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Pricing table */}
+            <div style={{ background:'rgba(253,246,236,0.04)', border:'1px solid rgba(253,246,236,0.08)', borderRadius:14, padding:'6px 22px 2px', marginBottom:28 }}>
+              <div className="label" style={{ color:'var(--coral)', fontSize:9, padding:'12px 0 6px' }}>{t('Pricing','Tarifs')}</div>
+              <div className="price-row">
+                <div>
+                  <div style={{ fontSize:14, color:'var(--cream)', fontWeight:500 }}>{t('General · Advance via RA','Général · Avance via RA')}</div>
+                  <div style={{ fontSize:12, color:'var(--cream-mute)', marginTop:3 }}>{t('All ages · No door sales once sold out','Tous âges · Pas de vente à la porte si complet')}</div>
+                </div>
+                <div style={{ textAlign:'right' }}>
+                  <div className="h-serif" style={{ fontSize:28, color:'var(--coral)', whiteSpace:'nowrap' }}>$55</div>
+                  <div style={{ fontSize:10, color:'var(--cream-mute)' }}>+ {t('fees','frais')}</div>
+                </div>
+              </div>
+              <div className="price-row">
+                <div>
+                  <div style={{ fontSize:14, color:'var(--cream)', fontWeight:500 }}>{t('McGill Students · Express Lane','Étudiant(e)s McGill · File rapide')}</div>
+                  <div style={{ fontSize:12, color:'var(--cream-mute)', marginTop:3 }}>{t('Same price · Student card at gate for express entry','Même prix · Carte étudiante à l\'entrée pour accès rapide')}</div>
+                </div>
+                <div style={{ textAlign:'right' }}>
+                  <div className="h-serif" style={{ fontSize:28, color:'var(--coral)', whiteSpace:'nowrap' }}>$55</div>
+                  <div style={{ fontSize:10, color:'var(--cream-mute)' }}>+ {t('fees','frais')}</div>
+                </div>
+              </div>
+              <div className="price-row">
+                <div>
+                  <div style={{ fontSize:14, color:'var(--cream-mute)', fontWeight:500 }}>{t('At the Door','À la porte')}</div>
+                  <div style={{ fontSize:12, color:'var(--cream-mute)', marginTop:3 }}>{t('Not guaranteed — subject to remaining capacity','Non garanti — selon la capacité restante')}</div>
+                </div>
+                <div style={{ fontSize:13, color:'var(--cream-mute)', whiteSpace:'nowrap' }}>—</div>
+              </div>
+            </div>
+
+            {/* Capacity warning */}
+            <div style={{ padding:'15px 18px', background:'rgba(194,24,91,0.09)', borderRadius:10, border:'1px solid rgba(194,24,91,0.22)' }}>
+              <p style={{ margin:0, fontSize:13, color:'var(--cream-soft)', lineHeight:1.65 }}>
+                <strong style={{ color:'var(--magenta)' }}>{t('Limited capacity.','Capacité limitée.')}</strong> {t('The DJ Closing Set is a ticketed, capped event. Advance Sunset Pass via RA is the only guaranteed way in. The Gold Hour Pass does not include the set — upgrade to Sunset Pass to secure your spot.','Le Set DJ de clôture est un événement avec billets et capacité limitée. Le Laissez-passer Coucher de Soleil en avance via RA est la seule façon garantie d\'y assister. Le Laissez-passer Heure Dorée n\'inclut pas le set — passez au Laissez-passer Coucher de Soleil pour assurer votre place.')}
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─── PolicySection ────────────────────────────────────────────────────────────
+function PolicySection() {
+  const t = useLang();
+  const policies = [
+    {
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="12" stroke="var(--gold)" strokeWidth="1.5"/>
+          <path d="M10 14l3 3 5-6" stroke="var(--gold)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      ),
+      color:'var(--gold)',
+      title:t('Advance Purchase Only','Achat à l\'avance uniquement'),
+      body:t('All tickets are sold exclusively through RA (Resident Advisor). There are no tickets available at the gate for the Gold Hour Pass — purchase in advance to guarantee entry.','Tous les billets sont vendus exclusivement via RA (Resident Advisor). Aucun billet n\'est disponible à la porte — achetez à l\'avance pour garantir votre entrée.'),
+    },
+    {
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect x="4" y="5" width="20" height="18" rx="3" stroke="var(--coral)" strokeWidth="1.5"/>
+          <path d="M9 4v4M19 4v4M4 13h20" stroke="var(--coral)" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M9 18h4M9 21.5h8" stroke="var(--coral)" strokeWidth="1.5" strokeLinecap="round"/>
+        </svg>
+      ),
+      color:'var(--coral)',
+      title:t('19+ for Bar Access','18+ pour l\'accès au bar'),
+      body:t('Cocktail bar access is restricted to guests 19 and older with valid government-issued ID. A wristband will be issued at the gate. The rest of the event is all ages.','L\'accès au bar à cocktails est réservé aux invités de 18 ans et plus avec une pièce d\'identité valide émise par le gouvernement. Un bracelet sera remis à l\'entrée. Le reste de l\'événement est ouvert à tous les âges.'),
+    },
+    {
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <path d="M14 4L5 9v10l9 5 9-5V9l-9-5z" stroke="var(--cream-soft)" strokeWidth="1.5" strokeLinejoin="round"/>
+          <path d="M14 4v20M5 9l9 5 9-5" stroke="var(--cream-soft)" strokeWidth="1.5" strokeLinejoin="round"/>
+        </svg>
+      ),
+      color:'var(--cream-soft)',
+      title:t('McGill Express Lane','File rapide McGill'),
+      body:t('McGill students with a valid student card receive express lane entry at the same ticket price. Show your student card at the designated express lane upon arrival.','Les étudiant(e)s McGill avec une carte étudiante valide bénéficient d\'une entrée prioritaire au même prix. Montrez votre carte étudiante à la file rapide désignée à votre arrivée.'),
+    },
+    {
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <path d="M14 4C9.58 4 6 7.58 6 12c0 6 8 14 8 14s8-8 8-14c0-4.42-3.58-8-8-8z" stroke="var(--magenta)" strokeWidth="1.5"/>
+          <circle cx="14" cy="12" r="3" stroke="var(--magenta)" strokeWidth="1.5"/>
+        </svg>
+      ),
+      color:'var(--magenta)',
+      title:t('No Door Sales (Sunset Pass)','Pas de vente à la porte (Laissez-passer Coucher de Soleil)'),
+      body:t('Once the Sunset Pass sells out, there are no door sales for the DJ Closing Set. An advance Sunset Pass via RA is the only guaranteed way to attend the evening set.','Une fois le Laissez-passer Coucher de Soleil épuisé, il n\'y a pas de vente à la porte pour le Set DJ de clôture. Un Laissez-passer Coucher de Soleil en avance via RA est la seule façon garantie d\'assister au set du soir.'),
+    },
+  ];
+  return (
+    <section style={{ background:'var(--night)', padding:'96px 0 108px', borderTop:'1px solid rgba(253,246,236,0.06)' }}>
+      <div className="wrap">
+        <div style={{ marginBottom:56 }}>
+          <div style={{ display:'flex', alignItems:'center', gap:16, marginBottom:20 }}>
+            <span style={{ width:36, height:2, background:'var(--cream-mute)', borderRadius:2, opacity:0.4 }} />
+            <span className="label" style={{ color:'var(--cream-mute)' }}>{t('Know before you go','À savoir avant de venir')}</span>
+          </div>
+          <h2 className="h-serif" style={{ fontSize:'clamp(32px,4vw,56px)', margin:'0 0 14px', color:'var(--cream)' }}>
+            {t('Policies','Politiques')}{' '}&amp;{' '}
+            <span style={{ color:'var(--gold)', fontStyle:'italic' }}>{t('Info','Infos')}</span>
+          </h2>
+          <p style={{ fontSize:15, color:'var(--cream-mute)', maxWidth:520, margin:0, lineHeight:1.7 }}>
+            {t('Everything you need to know before you arrive at McGill Lower Field.','Tout ce que vous devez savoir avant d\'arriver au Terrain inférieur McGill.')}
+          </p>
+        </div>
+
+        <div className="policy-grid">
+          {policies.map((p, i) => (
+            <div key={i} style={{
+              background:'rgba(253,246,236,0.03)',
+              border:'1px solid rgba(253,246,236,0.07)',
+              borderRadius:16, padding:'28px 24px',
+              display:'flex', flexDirection:'column', gap:16,
+              transition:'border-color 200ms',
+            }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor='rgba(253,246,236,0.14)'; }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor='rgba(253,246,236,0.07)'; }}
+            >
+              <div>{p.icon}</div>
+              <div>
+                <div style={{ fontSize:14, fontWeight:600, color:'var(--cream)', marginBottom:8, letterSpacing:'0.01em' }}>{p.title}</div>
+                <p style={{ margin:0, fontSize:13, color:'var(--cream-mute)', lineHeight:1.7 }}>{p.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom CTA row */}
+        <div style={{ marginTop:56, padding:'28px 32px', background:'linear-gradient(135deg,rgba(45,27,107,0.4),rgba(28,26,58,0.5))', borderRadius:16, border:'1px solid rgba(224,149,0,0.15)', display:'flex', flexWrap:'wrap', alignItems:'center', justifyContent:'space-between', gap:24 }}>
+          <div>
+            <div className="label" style={{ color:'var(--gold)', marginBottom:8 }}>{t('Ready to join?','Prêt(e) à rejoindre ?')}</div>
+            <p style={{ margin:0, fontSize:15, color:'var(--cream-soft)' }}>
+              {t('Tickets available now on RA. Secure your spot before capacity is reached.','Billets disponibles maintenant sur RA. Réservez votre place avant que la capacité soit atteinte.')}
+            </p>
+          </div>
+          <div style={{ display:'flex', gap:12, flexWrap:'wrap' }}>
+            <a href="#gold-hour" style={{ display:'inline-flex', alignItems:'center', gap:8, border:'1px solid rgba(224,149,0,0.5)', color:'var(--gold)', padding:'13px 22px', borderRadius:999, fontSize:12, fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase', transition:'background 180ms' }}
+            onMouseEnter={e => e.currentTarget.style.background='rgba(224,149,0,0.1)'}
+            onMouseLeave={e => e.currentTarget.style.background='transparent'}
+            >{t('Gold Hour — $35','Heure Dorée — 35 $')}</a>
+            <a href="#sunset-pass" style={{ display:'inline-flex', alignItems:'center', gap:8, background:'var(--magenta)', color:'var(--cream)', padding:'13px 22px', borderRadius:999, fontSize:12, fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase', boxShadow:'0 0 24px rgba(194,24,91,0.3)', transition:'box-shadow 180ms, transform 160ms' }}
+            onMouseEnter={e => { e.currentTarget.style.boxShadow='0 0 40px rgba(194,24,91,0.55)'; e.currentTarget.style.transform='translateY(-1px)'; }}
+            onMouseLeave={e => { e.currentTarget.style.boxShadow='0 0 24px rgba(194,24,91,0.3)'; e.currentTarget.style.transform='none'; }}
+            >✦ {t('Sunset Pass — $55','Laissez-passer Coucher de Soleil — 55 $')}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─── Footer ───────────────────────────────────────────────────────────────────
+function PageFooter(){
+  const t = useLang();
+  const navLinks = t(
+    [['Tickets','tickets.html'],['Programme','programme.html'],['The Field','village.html'],['FAQ','faq.html'],['Partners','partners.html'],['Contact','contact.html']],
+    [['Billets','tickets.html'],['Programme','programme.html'],['Le Terrain','village.html'],['FAQ','faq.html'],['Partenaires','partners.html'],['Contact','contact.html']]
+  );
+  return (
+    <footer style={{ background:'var(--night)', borderTop:'1px solid rgba(224,149,0,0.3)', padding:'64px 0 32px' }}>
+      <div className="wrap">
+        <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', flexWrap:'wrap', gap:48, marginBottom:48 }}>
+          <div style={{ maxWidth:320 }}>
+            <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:16 }}>
+              <span style={{ width:12, height:12, borderRadius:'50%', background:'radial-gradient(circle at 35% 35%, #FFD27A, var(--gold) 60%, #8a4a00 100%)', boxShadow:'0 0 10px rgba(224,149,0,0.6)' }} />
+              <span className="label" style={{ letterSpacing:'0.28em', fontSize:11 }}>Into The Sunset</span>
+            </div>
+            <p className="h-serif" style={{ fontSize:16, lineHeight:1.5, letterSpacing:'0.04em', color:'var(--cream)', margin:'0 0 6px' }}>
+              {t('The last warm','La dernière soirée')}{' '}<span style={{ fontStyle:'italic', color:'var(--coral)' }}>{t('evening','chaude')}</span>{t(' of summer.',' de l\'été.')}
+            </p>
+            <p style={{ fontSize:12, color:'var(--cream-mute)', margin:0, lineHeight:1.6 }}>{t('Sept 11 & 12, 2026 · McGill Lower Field · Montréal','11 et 12 sept. 2026 · Terrain inférieur McGill · Montréal')}</p>
+          </div>
+          <div>
+            <div className="label" style={{ color:'var(--gold)', marginBottom:16, fontSize:10 }}>{t('Follow us','Suivez-nous')}</div>
+            <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"
+                style={{ display:'flex', alignItems:'center', gap:10, color:'var(--cream-mute)', fontSize:13, transition:'color 160ms' }}
+                onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'}
+                onMouseLeave={e=>e.currentTarget.style.color='var(--cream-mute)'}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+                Instagram
+              </a>
+              <a href={TIKTOK_URL} target="_blank" rel="noopener noreferrer"
+                style={{ display:'flex', alignItems:'center', gap:10, color:'var(--cream-mute)', fontSize:13, transition:'color 160ms' }}
+                onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'}
+                onMouseLeave={e=>e.currentTarget.style.color='var(--cream-mute)'}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+                TikTok
+              </a>
+            </div>
+          </div>
+          <div>
+            <div className="label" style={{ color:'var(--gold)', marginBottom:16, fontSize:10 }}>Menu</div>
+            <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:10 }}>
+              {navLinks.map(([l,h])=>(
+                <li key={l}><a href={h} style={{ fontSize:13, color:'var(--cream-soft)', letterSpacing:'0.04em', transition:'color 160ms' }}
+                  onMouseEnter={e=>e.currentTarget.style.color='var(--gold)'}
+                  onMouseLeave={e=>e.currentTarget.style.color='var(--cream-soft)'}>{l}</a></li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div style={{ paddingTop:24, borderTop:'1px solid rgba(253,246,236,0.07)', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:16, fontSize:11, letterSpacing:'0.1em', color:'var(--cream-mute)' }}>
+          <span>© 2026 MomentsThatLive · {t('Produced in partnership with EUS, McGill University · Montréal, QC','Produit en partenariat avec l\'EUS, Université McGill · Montréal, QC')}</span>
+          <span style={{ display:'flex', gap:16, alignItems:'center' }}>
+            <a href="privacy.html" style={{ transition:'color 160ms' }} onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'} onMouseLeave={e=>e.currentTarget.style.color=''}>{t('Privacy','Confidentialité')}</a>
+            <a href="terms.html" style={{ transition:'color 160ms' }} onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'} onMouseLeave={e=>e.currentTarget.style.color=''}>{t('Terms','Modalités')}</a>
+            <LangLink />
+          </span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+// ─── App ──────────────────────────────────────────────────────────────────────
+function App() {
+  const [lang, setLang] = React.useState(localStorage.getItem('its_lang') || 'en');
+  const setLangSave = l => { setLang(l); localStorage.setItem('its_lang', l); document.getElementById('html-root').lang = l; };
+  React.useEffect(() => { document.getElementById('html-root').lang = lang; }, [lang]);
+  return (
+    <LangContext.Provider value={{ lang, setLang: setLangSave }}>
+      <PageNav />
+      <Hero />
+      <Countdown />
+      <div style={{ display:'flex', justifyContent:'center', padding:'40px 0 52px', background:'var(--night)', position:'relative', zIndex:100 }}>
+        <div aria-hidden="true" style={{ position:'absolute', inset:0, pointerEvents:'none', backgroundImage:'radial-gradient(rgba(253,246,236,0.06) 1px, transparent 1px)', backgroundSize:'14px 14px' }} />
+        <CalendarButton />
+      </div>
+      <BentoTickets />
+      <GoldHourSection />
+      <SunsetPassSection />
+      <PolicySection />
+      <PageFooter />
+    </LangContext.Provider>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+<script>(function(){var root=document.getElementById('root'),done=false;function show(){if(done)return;done=true;root.classList.add('its-ready');}if(root&&root.firstChild){show();}else{var o=new MutationObserver(function(){if(root.firstChild){o.disconnect();show();}});o.observe(root,{childList:true,subtree:true});setTimeout(show,900);}document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('http')||h.startsWith('mailto')||h.startsWith('javascript')||a.target==='_blank')return;e.preventDefault();root.classList.remove('its-ready');document.body.classList.add('its-out');setTimeout(function(){location.href=h},270);});})();</script>
+<script src="cookie-consent.js"></script>
+<div id="cursor-glow" aria-hidden="true"></div>
+<style>
+#cursor-glow{position:fixed;top:0;left:0;width:500px;height:500px;border-radius:50%;pointer-events:none;z-index:9998;background:radial-gradient(circle,rgba(255,217,61,0.12) 0%,rgba(255,107,157,0.06) 40%,transparent 68%);opacity:0;transition:opacity 0.5s ease;will-change:transform;}
+@media(hover:none){#cursor-glow{display:none}}
+</style>
+<script>
+(function(){
+  var el=document.getElementById('cursor-glow');
+  var mx=0,my=0,cx=0,cy=0,on=false;
+  document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;if(!on){on=true;el.style.opacity='1';}});
+  document.addEventListener('mouseleave',function(){el.style.opacity='0';on=false;});
+  (function loop(){cx+=(mx-cx)*0.07;cy+=(my-cy)*0.07;el.style.transform='translate(calc('+cx.toFixed(1)+'px - 50%),calc('+cy.toFixed(1)+'px - 50%))';requestAnimationFrame(loop);})();
+})();
+</script>
+</body>
+</html>

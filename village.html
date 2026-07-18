@@ -1,0 +1,680 @@
+﻿<!doctype html>
+<html lang="en" id="html-root">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Field — Into The Sunset · Sept 11 &amp; 12, 2026</title>
+<meta name="description" content="Explore The Field at Into The Sunset — brand activations, tattoo parlour, photo booths, cocktail bar, and more. Sept 11 &amp; 12, 2026 · McGill Lower Field, Montréal.">
+<meta name="theme-color" content="#0A0814">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Into The Sunset">
+<meta property="og:title" content="The Field — Into The Sunset · Sept 11 &amp; 12, 2026">
+<meta property="og:description" content="Brand activations, tattoo parlour, photo booths, cocktail bar, and more. Sept 11 &amp; 12, 2026 · McGill Lower Field, Montréal.">
+<meta property="og:url" content="https://kimgianguyen.github.io/intothesunset/village.html">
+<meta property="og:image" content="https://kimgianguyen.github.io/intothesunset/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Into The Sunset — an outdoor music festival at McGill Lower Field, Montréal · Sept 11 &amp; 12, 2026">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Field — Into The Sunset · Sept 11 &amp; 12, 2026">
+<meta name="twitter:description" content="Brand activations, tattoo parlour, photo booths, cocktail bar, and more. Sept 11 &amp; 12, 2026 · McGill Lower Field, Montréal.">
+<meta name="twitter:image" content="https://kimgianguyen.github.io/intothesunset/og-image.jpg">
+<link rel="canonical" href="https://kimgianguyen.github.io/intothesunset/village.html">
+<style id="page-fx">@keyframes its-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}#root{opacity:0}#root.its-ready{animation:its-in .5s cubic-bezier(.22,1,.36,1) both}body.its-out #root{opacity:0;transform:translateY(-5px);transition:opacity .25s ease,transform .25s ease}body.its-out{pointer-events:none}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bowlby+One&family=Barlow+Condensed:wght@500;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Mono&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#1A0B2E; --dusk:#2D1F4F; --plum:#3D2960;
+    --gold:#FFD93D; --coral:#FF6B9D; --magenta:#C44CFF;
+    --cream:#FFF5F8; --cream-soft:rgba(255,245,248,0.9); --cream-mute:rgba(255,245,248,0.55);
+    --serif:"Bowlby One",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:var(--night); color:var(--cream); font-family:var(--sans); -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; text-decoration:none; }
+  button{ font-family:inherit; cursor:pointer; border:none; background:none; color:inherit; }
+  img{ max-width:100%; display:block; }
+  .label{ font-family:var(--sans); font-weight:600; text-transform:uppercase; letter-spacing:0.22em; font-size:11px; }
+  .h-serif{ font-family:var(--serif); font-weight:700; line-height:0.95; letter-spacing:-0.005em; text-transform:uppercase; }
+  .italic-coral{ font-style:italic; color:var(--coral); }
+  .wrap{ max-width:1280px; margin:0 auto; padding:0 32px; }
+  @media(max-width:720px){ .wrap{ padding:0 20px; } }
+  @keyframes twinkle{ 0%,100%{ opacity:0.15; } 50%{ opacity:0.7; } }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel">
+
+// ─── Language system ──────────────────────────────────────────────────────────
+const LangContext = React.createContext({ lang:'en', setLang:()=>{} });
+function useLang(){
+  const {lang} = React.useContext(LangContext);
+  return (en, fr) => lang === 'fr' ? fr : en;
+}
+function LangLink(){
+  const {lang, setLang} = React.useContext(LangContext);
+  const next = lang === 'en' ? 'fr' : 'en';
+  const label = lang === 'en' ? 'Français' : 'English';
+  return (
+    <button onClick={() => { setLang(next); localStorage.setItem('its_lang',next); document.getElementById('html-root').lang=next; }}
+      style={{ background:'none', border:'none', cursor:'pointer', padding:0, fontSize:11, letterSpacing:'0.1em', color:'var(--cream-mute)', transition:'color 160ms', fontFamily:'inherit' }}
+      onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'}
+      onMouseLeave={e=>e.currentTarget.style.color='var(--cream-mute)'}
+    >{label}</button>
+  );
+}
+
+// ─── Shared primitives ────────────────────────────────────────────────────────
+function SectionLabel({ children, color='var(--gold)' }){
+  return <div className="label" style={{ color }}>{children}</div>;
+}
+
+function makeTornPath(seed=1,segments=18,width=1440,height=48){
+  let s=seed*9301+49297;
+  const rand=()=>{ s=(s*9301+49297)%233280; return s/233280; };
+  const step=width/segments;
+  let d=`M0,${height} L0,${height*0.55}`;
+  for(let i=0;i<=segments;i++){
+    const x=i*step,baseY=height*0.4,jitter=(rand()-0.5)*height*0.7;
+    const y=Math.max(2,Math.min(height-2,baseY+jitter));
+    if(i%3===0){ d+=` L${x.toFixed(1)},${y.toFixed(1)}`; }
+    else{ const cx=x-step*0.5,cy=y+(rand()-0.5)*14; d+=` Q${cx.toFixed(1)},${cy.toFixed(1)} ${x.toFixed(1)},${y.toFixed(1)}`; }
+  }
+  return d+` L${width},${height} Z`;
+}
+function TornEdge({ fill='#0A0814',seed=1,position='bottom',height=56,accent }){
+  const path=React.useMemo(()=>makeTornPath(seed,22,1440,height),[seed,height]);
+  const aPath=React.useMemo(()=>makeTornPath(seed+7,22,1440,height*0.85),[seed,height]);
+  return (
+    <div style={{ position:'absolute',left:0,right:0,[position]:-1,height,pointerEvents:'none',zIndex:4,transform:position==='top'?'scaleY(-1)':'none' }}>
+      <svg viewBox={`0 0 1440 ${height}`} preserveAspectRatio="none" style={{ width:'100%',height:'100%' }}>
+        {accent&&<path d={aPath} fill={accent} opacity="0.55" transform={`translate(0,${height*0.06})`} />}
+        <path d={path} fill={fill} />
+      </svg>
+    </div>
+  );
+}
+
+// ─── Nav ──────────────────────────────────────────────────────────────────────
+function Nav(){
+  const t = useLang();
+  const links=[[t('Programme','Programme'),'programme.html'],[t('Tickets','Billets'),'tickets.html'],[t('The Field','Le Terrain'),'village.html'],['FAQ','faq.html'],[t('Partners','Partenaires'),'partners.html'],[t('Contact','Contact'),'contact.html']];
+  const [scrolled,setScrolled]=React.useState(false);
+  React.useEffect(()=>{
+    const fn=()=>setScrolled(window.scrollY>30);
+    window.addEventListener('scroll',fn,{passive:true});
+    return ()=>window.removeEventListener('scroll',fn);
+  },[]);
+  return (
+    <nav style={{ position:'fixed',top:0,left:0,right:0,zIndex:50,transition:'background 220ms ease,backdrop-filter 220ms ease,border-color 220ms ease',background:scrolled?'rgba(26,11,46,0.82)':'transparent',backdropFilter:scrolled?'blur(14px) saturate(140%)':'none',WebkitBackdropFilter:scrolled?'blur(14px) saturate(140%)':'none',borderBottom:scrolled?'1px solid rgba(255,245,248,0.08)':'1px solid transparent' }}>
+      <div className="wrap" style={{ display:'flex',alignItems:'center',justifyContent:'space-between',height:64 }}>
+        <a href="index.html" style={{ display:'flex',alignItems:'center',gap:10 }}>
+          <span style={{ width:14,height:14,borderRadius:'50%',background:'radial-gradient(circle at 35% 35%,#FFD27A,var(--gold) 60%,#8a4a00 100%)',boxShadow:'0 0 14px rgba(224,149,0,0.7)' }} />
+          <span className="label" style={{ letterSpacing:'0.28em' }}>Into The Sunset</span>
+        </a>
+        <div style={{ display:'flex',gap:28,alignItems:'center' }}>
+          <div style={{ display:'flex',gap:24 }}>
+            {links.map(([label,href])=>(
+              <a key={href} href={href} className="label" style={{ color:'var(--cream-soft)',fontSize:11,transition:'color 160ms' }}
+                onMouseEnter={e=>e.currentTarget.style.color='var(--gold)'}
+                onMouseLeave={e=>e.currentTarget.style.color='var(--cream-soft)'}
+              >{label}</a>
+            ))}
+          </div>
+          <a href="tickets.html" style={{ background:'var(--magenta)',color:'var(--cream)',padding:'10px 18px',borderRadius:999,fontSize:12,fontWeight:600,letterSpacing:'0.14em',textTransform:'uppercase',transition:'box-shadow 200ms,transform 160ms' }}
+            onMouseEnter={e=>{ e.currentTarget.style.boxShadow='0 0 24px rgba(196,76,255,0.55)'; e.currentTarget.style.transform='translateY(-1px)'; }}
+            onMouseLeave={e=>{ e.currentTarget.style.boxShadow='none'; e.currentTarget.style.transform='translateY(0)'; }}
+          >{t('Get Tickets','Obtenir des billets')}</a>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+// ─── Hero ─────────────────────────────────────────────────────────────────────
+function Stars({ count=40 }){
+  const stars=React.useMemo(()=>Array.from({length:count},()=>({x:Math.random()*100,y:Math.random()*100,s:Math.random()*1.4+0.4,d:Math.random()*5})),[count]);
+  return (
+    <div style={{ position:'absolute',inset:0 }}>
+      {stars.map((s,i)=>(
+        <div key={i} style={{ position:'absolute',left:`${s.x}%`,top:`${s.y}%`,width:s.s,height:s.s,borderRadius:'50%',background:'var(--cream)',animation:`twinkle 3.5s ease-in-out ${s.d}s infinite` }} />
+      ))}
+    </div>
+  );
+}
+
+function PageHero(){
+  const t = useLang();
+  return (
+    <section style={{ position:'relative',background:'var(--night)',padding:'140px 0 88px',overflow:'hidden',textAlign:'center' }}>
+      <div style={{ position:'absolute',inset:0,background:'linear-gradient(to bottom,#060412 0%,#1A0B2E 35%,#2D1F4F 65%,#3D1540 80%,rgba(255,107,157,0.1) 100%)' }} />
+      <div style={{ position:'absolute',inset:0,background:'radial-gradient(ellipse 70% 50% at 50% 100%,rgba(196,76,255,0.15),transparent 65%)' }} />
+      <Stars count={55} />
+      <div className="wrap" style={{ position:'relative',zIndex:1 }}>
+        <div className="label" style={{ color:'var(--gold)',marginBottom:20 }}>Into The Sunset · McGill Lower Field</div>
+        <h1 className="h-serif" style={{ fontSize:'clamp(52px,9vw,120px)',margin:'0 0 20px',color:'var(--cream)' }}>
+          {t('The','Le')}{' '}<span style={{ fontStyle:'italic',color:'var(--coral)',textShadow:'0 0 60px rgba(255,107,157,0.45)' }}>{t('Field','Terrain')}</span>
+        </h1>
+        <p style={{ fontSize:16,color:'var(--cream-mute)',maxWidth:520,margin:'0 auto 32px' }}>
+          {t('Six stations spread across McGill\'s Lower Field. Drop in, walk out, come back. Free with your Gold Hour Pass from 11 to 5.','Six stations réparties sur le Terrain inférieur McGill. Entrez, repartez, revenez. Inclus avec votre Laissez-passer Heure Dorée de 11 h à 17 h.')}
+        </p>
+        <div style={{ display:'inline-flex',gap:10,flexWrap:'wrap',justifyContent:'center' }}>
+          <span style={{ padding:'10px 20px',background:'rgba(255,217,61,0.1)',border:'1px solid rgba(255,217,61,0.3)',borderRadius:999,fontSize:12,fontWeight:600,letterSpacing:'0.12em',textTransform:'uppercase',color:'var(--gold)' }}>
+            {t('Open 11 AM – 5 PM','Ouvert 11 h – 17 h')}
+          </span>
+          <span style={{ padding:'10px 20px',background:'rgba(255,107,157,0.1)',border:'1px solid rgba(255,107,157,0.3)',borderRadius:999,fontSize:12,fontWeight:600,letterSpacing:'0.12em',textTransform:'uppercase',color:'var(--coral)' }}>
+            {t('Gold Hour Pass · $35','Laissez-passer Heure Dorée · 35 $')}
+          </span>
+        </div>
+      </div>
+      <TornEdge fill="var(--dusk)" accent="var(--coral)" seed={7} position="bottom" height={72} />
+    </section>
+  );
+}
+
+// ─── Station cards ────────────────────────────────────────────────────────────
+function StationCard({ name, desc, accent, icon, idx }){
+  const [hover,setHover]=React.useState(false);
+  const tilt=idx%3===1?0.6:idx%3===2?-0.4:0.2;
+  return (
+    <article onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}
+      style={{ position:'relative',background:'rgba(45,31,79,0.6)',border:'1px solid rgba(255,245,248,0.07)',borderRadius:14,padding:'28px 24px 26px',
+        transform:hover?`translateY(-4px) rotate(${tilt*0.3}deg)`:`rotate(${tilt}deg)`,
+        boxShadow:hover?`0 18px 40px rgba(0,0,0,0.5), 0 0 0 1px ${accent}55`:'0 6px 16px rgba(0,0,0,0.35)',
+        transition:'transform 240ms ease, box-shadow 240ms ease', overflow:'hidden' }}>
+      <div style={{ position:'absolute',left:0,top:0,bottom:0,width:3,background:accent }} />
+      <div style={{ display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:18 }}>
+        <span className="label" style={{ color:'var(--cream-mute)',fontSize:10 }}>0{idx+1} · Station</span>
+        <span style={{ fontSize:24,color:accent,lineHeight:1 }}>{icon}</span>
+      </div>
+      <h3 className="h-serif" style={{ fontSize:26,margin:'0 0 10px' }}>{name}</h3>
+      <p style={{ fontSize:14,lineHeight:1.5,color:'var(--cream-soft)',margin:0 }}>{desc}</p>
+    </article>
+  );
+}
+
+const STATIONS_EN=[
+  { name:'Main Stage',     accent:'var(--coral)',   desc:'Where the afternoon warms up and the sunset begins.',             icon:'◐' },
+  { name:'Energy Zone',    accent:'var(--gold)',    desc:'Sampling, giveaways, and brand activations from partners.',       icon:'✦' },
+  { name:'Tattoo Station', accent:'var(--magenta)', desc:'Flash sheet and walk-ins from local Montréal artists.',           icon:'✺' },
+  { name:'Photo Booth',    accent:'var(--gold)',    desc:'Instant prints to take home before the lights drop.',             icon:'◇' },
+  { name:'Cocktail Bar',   accent:'var(--coral)',   desc:'Two original cocktails, beer on tap, soft drinks. 19+.',          icon:'◈' },
+  { name:'Pop-Up Market',  accent:'var(--magenta)', desc:'Twelve Montréal makers — apparel, prints, ceramics, books.',     icon:'⬡' },
+];
+const STATIONS_FR=[
+  { name:'Scène principale',    accent:'var(--coral)',   desc:'Là où l\'après-midi se réchauffe et où le coucher de soleil commence.', icon:'◐' },
+  { name:'Zone d\'énergie',     accent:'var(--gold)',    desc:'Échantillonnage, cadeaux et activations de marques partenaires.',       icon:'✦' },
+  { name:'Atelier de tatouage', accent:'var(--magenta)', desc:'Planches flash et sans rendez-vous avec des artistes locaux montréalais.', icon:'✺' },
+  { name:'Cabine photo',        accent:'var(--gold)',    desc:'Impressions instantanées à emporter avant que les lumières s\'éteignent.', icon:'◇' },
+  { name:'Bar à cocktails',     accent:'var(--coral)',   desc:'Deux cocktails originaux, bière pression, boissons non alcoolisées. 18+.', icon:'◈' },
+  { name:'Marché éphémère',     accent:'var(--magenta)', desc:'Douze artisans montréalais — vêtements, imprimés, céramiques, livres.',  icon:'⬡' },
+];
+
+function VillageSection(){
+  const t = useLang();
+  const {lang} = React.useContext(LangContext);
+  const stations = lang==='fr' ? STATIONS_FR : STATIONS_EN;
+  return (
+    <section style={{ position:'relative',background:'var(--dusk)',padding:'96px 0 100px' }}>
+      <div style={{ position:'absolute',inset:0,background:'radial-gradient(ellipse 60% 50% at 80% 100%,rgba(196,76,255,0.1),transparent 60%)',pointerEvents:'none' }} />
+      <div className="wrap" style={{ position:'relative',zIndex:1 }}>
+        <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-end',flexWrap:'wrap',gap:24,marginBottom:48 }}>
+          <div>
+            <SectionLabel>{t('Where your afternoon lives','Où se passe votre après-midi')}</SectionLabel>
+            <h2 className="h-serif" style={{ fontSize:'clamp(36px,4.5vw,60px)',margin:'10px 0 0' }}>{t('Six stations.','Six stations.')}{' '}<span style={{ fontStyle:'italic',color:'var(--coral)' }}>{t('One field.','Un terrain.')}</span></h2>
+          </div>
+          <p style={{ maxWidth:380,color:'var(--cream-mute)',fontSize:15,lineHeight:1.55,margin:0 }}>
+            {t('Spread across McGill Lower Field. Each one designed to make September 11 & 12 feel like the last summer day that counts.','Réparties sur le Terrain inférieur McGill. Chacune conçue pour que les 11 et 12 septembre ressemblent au dernier jour d\'été qui compte.')}
+          </p>
+        </div>
+        <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:18 }}>
+          {stations.map((s,i)=><StationCard key={s.name} idx={i} {...s} />)}
+        </div>
+      </div>
+      <TornEdge fill="var(--night)" accent="var(--coral)" seed={17} position="bottom" height={72} />
+    </section>
+  );
+}
+
+// ─── Field Map ────────────────────────────────────────────────────────────────
+const MAP_ZONES_EN=[
+  {id:1,name:'Main Stage',    short:'STAGE',   accent:'var(--coral)',   rgb:'255,107,157',cx:400,cy:416,desc:'Where the afternoon warms up and the sunset begins.'},
+  {id:2,name:'Energy Zone',   short:'ENERGY',  accent:'var(--gold)',    rgb:'255,217,61', cx:590,cy:155,desc:'Sampling, giveaways, and brand activations from partners.'},
+  {id:3,name:'Tattoo Station',short:'TATTOO',  accent:'var(--magenta)',rgb:'196,76,255', cx:168,cy:348,desc:'Flash sheet and walk-ins from local Montréal artists.'},
+  {id:4,name:'Photo Booth',   short:'PHOTO',   accent:'var(--gold)',    rgb:'255,217,61', cx:178,cy:148,desc:'Instant prints to take home before the lights drop.'},
+  {id:5,name:'Cocktail Bar',  short:'BAR',     accent:'var(--coral)',   rgb:'255,107,157',cx:400,cy:265,desc:'Two original cocktails, beer on tap, soft drinks. 19+.'},
+  {id:6,name:'Pop-Up Market', short:'MARKET',  accent:'var(--magenta)',rgb:'196,76,255', cx:612,cy:350,desc:'Twelve Montréal makers — apparel, prints, ceramics, books.'},
+];
+const MAP_ZONES_FR=[
+  {id:1,name:'Scène principale',  short:'SCÈNE',   accent:'var(--coral)',   rgb:'255,107,157',cx:400,cy:416,desc:"Là où l'après-midi se réchauffe et où le coucher de soleil commence."},
+  {id:2,name:"Zone d'énergie",    short:'ÉNERGIE', accent:'var(--gold)',    rgb:'255,217,61', cx:590,cy:155,desc:'Échantillonnage, cadeaux et activations de marques partenaires.'},
+  {id:3,name:'Atelier tatouage',  short:'TATOUAGE',accent:'var(--magenta)',rgb:'196,76,255', cx:168,cy:348,desc:'Planches flash et sans rendez-vous avec des artistes locaux montréalais.'},
+  {id:4,name:'Cabine photo',      short:'PHOTO',   accent:'var(--gold)',    rgb:'255,217,61', cx:178,cy:148,desc:"Impressions instantanées à emporter avant que les lumières s'éteignent."},
+  {id:5,name:'Bar à cocktails',   short:'BAR',     accent:'var(--coral)',   rgb:'255,107,157',cx:400,cy:265,desc:'Deux cocktails originaux, bière pression, boissons non alcoolisées. 18+.'},
+  {id:6,name:'Marché éphémère',   short:'MARCHÉ',  accent:'var(--magenta)',rgb:'196,76,255', cx:612,cy:350,desc:'Douze artisans montréalais — vêtements, imprimés, céramiques, livres.'},
+];
+
+function FieldMapSection(){
+  const t=useLang();
+  const {lang}=React.useContext(LangContext);
+  const zones=lang==='fr'?MAP_ZONES_FR:MAP_ZONES_EN;
+  const [hovered,setHovered]=React.useState(null);
+  const [selected,setSelected]=React.useState(null);
+  const active=selected!==null?selected:hovered;
+  const activeZone=active!==null?zones.find(z=>z.id===active):null;
+
+  return (
+    <section style={{position:'relative',background:'var(--night)',padding:'96px 0 80px',overflow:'hidden'}}>
+      <div style={{position:'absolute',inset:0,background:'radial-gradient(ellipse 60% 40% at 50% 60%,rgba(196,76,255,0.07),transparent 65%)',pointerEvents:'none'}}/>
+      <div className="wrap" style={{position:'relative',zIndex:1}}>
+
+        <div style={{textAlign:'center',marginBottom:52}}>
+          <SectionLabel>{t('Explore The Field','Explorer le terrain')}</SectionLabel>
+          <h2 className="h-serif" style={{fontSize:'clamp(28px,4vw,52px)',margin:'12px 0 16px'}}>
+            {t('Where ','Où ')}<span style={{fontStyle:'italic',color:'var(--coral)'}}>{t('everything is.','tout se trouve.')}</span>
+          </h2>
+          <p style={{fontSize:15,color:'var(--cream-mute)',maxWidth:480,margin:'0 auto',lineHeight:1.7}}>
+            {t('McGill Lower Field, Sherbrooke entrance. Six zones — tap a marker to explore.','Terrain inférieur McGill, entrée Sherbrooke. Six zones — appuyez sur une zone pour explorer.')}
+          </p>
+        </div>
+
+        <div style={{maxWidth:860,margin:'0 auto',overflowX:'auto'}}>
+          <div style={{minWidth:340,borderRadius:16,overflow:'hidden',border:'1px solid rgba(255,245,248,0.08)',background:'rgba(255,245,248,0.015)'}}>
+            <svg viewBox="0 0 800 520" width="100%" style={{display:'block'}}
+              onMouseLeave={()=>setHovered(null)}
+              aria-label={t('Field zone map','Carte des zones du terrain')}
+            >
+              {/* Sherbrooke label */}
+              <text x="400" y="26" textAnchor="middle" fill="rgba(255,245,248,0.28)" fontSize="10" fontFamily='"Inter",sans-serif' fontWeight="600" letterSpacing="2">
+                {t('SHERBROOKE ST.','RUE SHERBROOKE')}
+              </text>
+              <text x="400" y="42" textAnchor="middle" fill="rgba(255,245,248,0.18)" fontSize="8.5" fontFamily='"Inter",sans-serif' fontWeight="600" letterSpacing="2">
+                {t('ENTRANCE ↓','ENTRÉE ↓')}
+              </text>
+
+              {/* Field boundary */}
+              <rect x="55" y="56" width="690" height="420" rx="12" fill="rgba(30,180,70,0.05)" stroke="rgba(255,245,248,0.12)" strokeWidth="1.5"/>
+
+              {/* Subtle grid */}
+              <line x1="55" y1="222" x2="745" y2="222" stroke="rgba(255,245,248,0.035)" strokeWidth="1"/>
+              <line x1="55" y1="366" x2="745" y2="366" stroke="rgba(255,245,248,0.035)" strokeWidth="1"/>
+              <line x1="252" y1="56" x2="252" y2="476" stroke="rgba(255,245,248,0.035)" strokeWidth="1"/>
+              <line x1="548" y1="56" x2="548" y2="476" stroke="rgba(255,245,248,0.035)" strokeWidth="1"/>
+
+              {/* North compass */}
+              <g transform="translate(723,93)">
+                <circle r="13" fill="rgba(255,245,248,0.03)" stroke="rgba(255,245,248,0.1)" strokeWidth="1"/>
+                <text x="0" y="4" textAnchor="middle" fill="rgba(255,245,248,0.3)" fontSize="9" fontFamily='"Inter",sans-serif' fontWeight="700">N</text>
+              </g>
+
+              {/* Zone markers */}
+              {zones.map(z=>{
+                const on=active===z.id;
+                const lblY=z.cy+40;
+                return (
+                  <g key={z.id}
+                    onClick={()=>setSelected(selected===z.id?null:z.id)}
+                    onMouseEnter={()=>setHovered(z.id)}
+                    style={{cursor:'pointer'}}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={z.name}
+                    aria-pressed={selected===z.id}
+                    onKeyDown={e=>e.key==='Enter'&&setSelected(selected===z.id?null:z.id)}
+                  >
+                    {on&&<circle cx={z.cx} cy={z.cy} r="36" fill={`rgba(${z.rgb},0.16)`}/>}
+                    <circle cx={z.cx} cy={z.cy} r="24" fill={`rgba(${z.rgb},${on?0.28:0.1})`} stroke={z.accent} strokeWidth={on?2.5:1.5}/>
+                    <text x={z.cx} y={z.cy} textAnchor="middle" dominantBaseline="central" fill={z.accent} fontSize="12" fontWeight="700" fontFamily='"Bowlby One",Georgia,serif' style={{pointerEvents:'none',userSelect:'none'}}>{'0'+z.id}</text>
+                    <text x={z.cx} y={lblY} textAnchor="middle" fill={on?z.accent:'rgba(255,245,248,0.38)'} fontSize="9.5" fontWeight="600" fontFamily='"Inter",sans-serif' letterSpacing="1.5" style={{pointerEvents:'none',userSelect:'none'}}>{z.short}</text>
+                  </g>
+                );
+              })}
+            </svg>
+          </div>
+        </div>
+
+        {/* Info panel */}
+        <div style={{maxWidth:860,margin:'14px auto 0',minHeight:76}}>
+          {activeZone?(
+            <div style={{display:'flex',alignItems:'flex-start',gap:20,flexWrap:'wrap',padding:'18px 22px',background:'rgba(255,245,248,0.04)',border:`1px solid rgba(${activeZone.rgb},0.22)`,borderRadius:12}}>
+              <span className="h-serif" style={{fontSize:34,lineHeight:1,color:activeZone.accent,minWidth:44,paddingTop:3,textAlign:'center',flexShrink:0}}>{'0'+activeZone.id}</span>
+              <div style={{borderLeft:'1px solid rgba(255,245,248,0.09)',paddingLeft:20,flex:1,minWidth:0}}>
+                <div className="h-serif" style={{fontSize:20,color:'var(--cream)',marginBottom:5}}>{activeZone.name}</div>
+                <p style={{fontSize:14,color:'var(--cream-mute)',margin:0,lineHeight:1.6}}>{activeZone.desc}</p>
+              </div>
+            </div>
+          ):(
+            <p style={{textAlign:'center',color:'rgba(255,245,248,0.2)',fontSize:11,letterSpacing:'0.12em',margin:0,paddingTop:24}}>
+              {t("▸ TAP OR HOVER A ZONE TO EXPLORE","▸ APPUYEZ SUR UNE ZONE POUR L'EXPLORER")}
+            </p>
+          )}
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+// ─── How to Get There ─────────────────────────────────────────────────────────
+function GetThereSection(){
+  const t = useLang();
+
+  const modes = [
+    {
+      accent:'var(--coral)', rgb:'255,107,157',
+      icon:(
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <rect x="3" y="8" width="18" height="13" rx="3"/>
+          <path d="M9 8V5a3 3 0 0 1 6 0v3"/>
+          <line x1="3" y1="14" x2="21" y2="14"/>
+          <circle cx="8" cy="19" r="1.2" fill="currentColor" stroke="none"/>
+          <circle cx="16" cy="19" r="1.2" fill="currentColor" stroke="none"/>
+        </svg>
+      ),
+      mode: t('Métro','Métro'),
+      headline: t('McGill Station','Station McGill'),
+      lines: [
+        t('Green Line (ligne 1) — 5 min walk','Ligne verte (ligne 1) — 5 min à pied'),
+        t('Exit McGill College Ave, walk south to Sherbrooke — the Roddick Gates entrance is directly in front.','Sortie av. McGill College, marchez vers le sud jusqu\'à Sherbrooke — l\'entrée Roddick est juste en face.'),
+        t('Peel Station also within 8 min walk.','Station Peel aussi à 8 min à pied.'),
+      ],
+    },
+    {
+      accent:'var(--gold)', rgb:'255,217,61',
+      icon:(
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <rect x="2" y="7" width="20" height="12" rx="3"/>
+          <path d="M2 11h20"/>
+          <circle cx="7" cy="19" r="1.5" fill="currentColor" stroke="none"/>
+          <circle cx="17" cy="19" r="1.5" fill="currentColor" stroke="none"/>
+          <path d="M7 7V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v2"/>
+        </svg>
+      ),
+      mode: t('Bus','Bus'),
+      headline: t('Routes 24 & 80','Lignes 24 & 80'),
+      lines: [
+        t('24 Sherbrooke — stops directly on Sherbrooke St in front of campus.','24 Sherbrooke — arrêt directement sur la rue Sherbrooke devant le campus.'),
+        t('80 Avenue du Parc — connects from Plateau-Mont-Royal & Mile-End.','80 Avenue du Parc — relie le Plateau-Mont-Royal et le Mile-End.'),
+        t('Real-time departures: STM app or exo.quebec','Départs en temps réel : app STM ou exo.quebec'),
+      ],
+    },
+    {
+      accent:'var(--magenta)', rgb:'196,76,255',
+      icon:(
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <circle cx="5.5" cy="17.5" r="3.5"/>
+          <circle cx="18.5" cy="17.5" r="3.5"/>
+          <path d="M5.5 14l3-7h7l3 7"/>
+          <path d="M12 7V3"/>
+          <circle cx="12" cy="2.5" r="1" fill="currentColor" stroke="none"/>
+          <path d="M8.5 14h7"/>
+        </svg>
+      ),
+      mode: t('Bike','Vélo'),
+      headline: t('BIXI & bike parking','BIXI & stationnement vélo'),
+      lines: [
+        t('BIXI docks on Sherbrooke St W & on McGill College Ave — less than 2 min from the entrance.','Bornes BIXI sur la rue Sherbrooke O. & av. McGill College — moins de 2 min de l\'entrée.'),
+        t('Dedicated bike parking at the field entrance gate.','Stationnement vélo dédié à l\'entrée du terrain.'),
+        t('No car theft here — bring your lock anyway.','Pas de vol ici — apportez votre cadenas quand même.'),
+      ],
+    },
+    {
+      accent:'rgba(255,245,248,0.7)', rgb:'255,245,248',
+      icon:(
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M5 17H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h13l4 4v6a2 2 0 0 1-2 2h-2"/>
+          <circle cx="7.5" cy="17.5" r="2.5"/>
+          <circle cx="17.5" cy="17.5" r="2.5"/>
+          <path d="M3 9h11"/>
+        </svg>
+      ),
+      mode: t('Car / Rideshare','Voiture / Covoiturage'),
+      headline: t('Drop-off & parking','Dépose-minute & stationnement'),
+      lines: [
+        t('Drop-off point: Sherbrooke St W in front of Roddick Gates — a 30-second walk to the entrance.','Point de dépose : rue Sherbrooke O. devant les Portes Roddick — 30 secondes de l\'entrée.'),
+        t('No on-site parking. Nearest lots: Q-Park on de Maisonneuve O., or Indigo on Peel.','Pas de stationnement sur place. Stationnements les plus proches : Q-Park sur de Maisonneuve O., ou Indigo sur Peel.'),
+        t('Uber / Lyft / taxi: set destination "McGill Roddick Gates, Montréal."','Uber / Lyft / taxi : destination « Portes Roddick McGill, Montréal ».'),
+      ],
+    },
+  ];
+
+  return (
+    <section style={{ position:'relative', background:'var(--dusk)', padding:'96px 0 88px', overflow:'hidden' }}>
+      <div style={{ position:'absolute', inset:0, background:'radial-gradient(ellipse 55% 45% at 20% 0%, rgba(255,107,157,0.07), transparent 60%)', pointerEvents:'none' }} />
+      <div className="wrap" style={{ position:'relative', zIndex:1 }}>
+
+        <div style={{ textAlign:'center', marginBottom:56 }}>
+          <SectionLabel>{t('Getting here','Comment venir')}</SectionLabel>
+          <h2 className="h-serif" style={{ fontSize:'clamp(32px,4.5vw,60px)', margin:'12px 0 16px' }}>
+            {t('How to ','Comment ')}<span style={{ fontStyle:'italic', color:'var(--coral)' }}>{t('get there.','y arriver.')}</span>
+          </h2>
+          <p style={{ fontSize:15, color:'var(--cream-mute)', maxWidth:500, margin:'0 auto', lineHeight:1.7 }}>
+            {t('McGill Lower Field, Sherbrooke entrance — right in the heart of downtown Montréal.','Terrain inférieur McGill, entrée Sherbrooke — au cœur du centre-ville de Montréal.')}
+          </p>
+        </div>
+
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))', gap:20, marginBottom:40 }}>
+          {modes.map((m) => (
+            <div key={m.mode} style={{
+              background:'rgba(255,245,248,0.03)',
+              border:`1px solid rgba(${m.rgb},0.18)`,
+              borderRadius:16,
+              padding:'28px 24px',
+              display:'flex',
+              flexDirection:'column',
+              gap:16,
+            }}>
+              <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+                <div style={{
+                  width:48, height:48, borderRadius:12, flexShrink:0,
+                  background:`rgba(${m.rgb},0.1)`,
+                  border:`1px solid rgba(${m.rgb},0.2)`,
+                  display:'flex', alignItems:'center', justifyContent:'center',
+                  color:m.accent,
+                }}>
+                  {m.icon}
+                </div>
+                <div>
+                  <div className="label" style={{ fontSize:9, color:m.accent, letterSpacing:'0.22em', marginBottom:3 }}>{m.mode}</div>
+                  <div className="h-serif" style={{ fontSize:18, color:'var(--cream)', lineHeight:1 }}>{m.headline}</div>
+                </div>
+              </div>
+              <ul style={{ margin:0, padding:0, listStyle:'none', display:'flex', flexDirection:'column', gap:10 }}>
+                {m.lines.map((line, i) => (
+                  <li key={i} style={{ display:'flex', gap:10, fontSize:13, color:'var(--cream-mute)', lineHeight:1.55 }}>
+                    <span style={{ color:m.accent, flexShrink:0, marginTop:2, fontSize:10 }}>▸</span>
+                    <span>{line}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ textAlign:'center' }}>
+          <a
+            href="https://maps.google.com/?q=McGill+Lower+Field,+Montreal,+QC"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display:'inline-flex', alignItems:'center', gap:9,
+              background:'rgba(255,107,157,0.08)', border:'1px solid rgba(255,107,157,0.28)',
+              color:'var(--coral)', padding:'12px 24px', borderRadius:999,
+              fontSize:11, fontWeight:600, letterSpacing:'0.16em', textTransform:'uppercase',
+              transition:'background 180ms, border-color 180ms',
+            }}
+            onMouseEnter={e=>{ e.currentTarget.style.background='rgba(255,107,157,0.16)'; e.currentTarget.style.borderColor='rgba(255,107,157,0.55)'; }}
+            onMouseLeave={e=>{ e.currentTarget.style.background='rgba(255,107,157,0.08)'; e.currentTarget.style.borderColor='rgba(255,107,157,0.28)'; }}
+          >
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            {t('Open in Google Maps','Ouvrir dans Google Maps')}
+          </a>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+// ─── Access info ──────────────────────────────────────────────────────────────
+function AccessSection(){
+  const t = useLang();
+  const rows = [
+    { label:t('Gates open','Ouverture des portes'),  value:t('11:00 AM — both days','11 h — les deux jours') },
+    { label:t('Field hours','Heures du terrain'),     value:t('11 AM – 5 PM','11 h – 17 h') },
+    { label:t('Closing set','Set de clôture'),         value:t('5 PM – 9 PM (ticketed)','17 h – 21 h (avec billet)') },
+    { label:t('Location','Adresse'),                   value:t('McGill Lower Field, Sherbrooke entrance','Terrain inférieur McGill, entrée Sherbrooke') },
+  ];
+  return (
+    <section style={{ background:'var(--night)',padding:'96px 0' }}>
+      <div className="wrap">
+        <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))',gap:48,maxWidth:960,margin:'0 auto' }}>
+          <div>
+            <SectionLabel>{t('How to get in','Comment accéder')}</SectionLabel>
+            <h2 className="h-serif" style={{ fontSize:'clamp(32px,3.5vw,52px)',margin:'10px 0 24px' }}>
+              {t('Access &','Accès &')}{' '}<span style={{ fontStyle:'italic',color:'var(--coral)' }}>{t('hours.','horaires.')}</span>
+            </h2>
+            <div style={{ display:'flex',flexDirection:'column',gap:20 }}>
+              {rows.map(r=>(
+                <div key={r.label} style={{ display:'flex',justifyContent:'space-between',alignItems:'center',padding:'16px 0',borderBottom:'1px solid rgba(255,245,248,0.07)' }}>
+                  <span className="label" style={{ color:'var(--cream-mute)',fontSize:10 }}>{r.label}</span>
+                  <span style={{ fontSize:14,fontWeight:500,color:'var(--cream)' }}>{r.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <div style={{ background:'rgba(255,245,248,0.04)',border:'1px solid rgba(255,245,248,0.09)',borderRadius:14,padding:'32px 28px',marginBottom:20 }}>
+              <div style={{ display:'flex',alignItems:'baseline',gap:14,marginBottom:12 }}>
+                <span className="h-serif" style={{ fontSize:22,color:'var(--cream)' }}>{t('Gold Hour Pass','Laissez-passer Heure Dorée')}</span>
+                <span className="h-serif" style={{ fontSize:28,color:'var(--gold)' }}>$35</span>
+              </div>
+              <p style={{ fontSize:14,color:'var(--cream-mute)',lineHeight:1.6,margin:'0 0 20px' }}>{t('Full access to all six Field stations — 11 AM to 5 PM, both days.','Accès complet aux six stations du Terrain — 11 h à 17 h, les deux jours.')}</p>
+              <a href="tickets.html" style={{ display:'inline-flex',alignItems:'center',gap:8,background:'var(--gold)',color:'var(--night)',padding:'12px 22px',borderRadius:999,fontSize:12,fontWeight:700,letterSpacing:'0.14em',textTransform:'uppercase' }}>{t('Buy via RA','Acheter via RA')} <span>→</span></a>
+            </div>
+            <div style={{ background:'rgba(255,107,157,0.08)',border:'1px solid rgba(255,107,157,0.22)',borderRadius:14,padding:'24px 28px' }}>
+              <div style={{ display:'flex',alignItems:'baseline',gap:14,marginBottom:10 }}>
+                <span className="h-serif" style={{ fontSize:20,color:'var(--cream)' }}>{t('Sunset Pass','Laissez-passer Coucher de Soleil')}</span>
+                <span className="h-serif" style={{ fontSize:24,color:'var(--coral)' }}>$55</span>
+              </div>
+              <p style={{ fontSize:13,color:'var(--cream-mute)',lineHeight:1.6,margin:'0 0 16px' }}>{t('Full Field access + DJ Closing Set. Guaranteed entry. Limited capacity.','Accès complet au Terrain + Set DJ de clôture. Entrée garantie. Capacité limitée.')}</p>
+              <a href="tickets.html" style={{ display:'inline-flex',alignItems:'center',gap:8,fontSize:12,fontWeight:600,letterSpacing:'0.14em',textTransform:'uppercase',color:'var(--coral)',borderBottom:'1px solid var(--coral)',paddingBottom:2 }}>{t('Get Sunset Pass','Obtenir le Laissez-passer Coucher de Soleil')} <span>→</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─── Footer ───────────────────────────────────────────────────────────────────
+// ─── Social links — update these two URLs ────────────────────────────────────
+const INSTAGRAM_URL = 'https://www.instagram.com/festivalintothesunset';
+const TIKTOK_URL    = 'https://www.tiktok.com/@festivalintothesunset';
+
+function Footer(){
+  const t = useLang();
+  const menuLinks = [[t('Tickets','Billets'),'tickets.html'],['Programme','programme.html'],[t('The Field','Le Terrain'),'village.html'],['FAQ','faq.html'],[t('Partners','Partenaires'),'partners.html'],[t('Contact','Contact'),'contact.html']];
+  return (
+    <footer style={{ background:'var(--night)', borderTop:'1px solid rgba(224,149,0,0.3)', padding:'64px 0 32px' }}>
+      <div className="wrap">
+        <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', flexWrap:'wrap', gap:48, marginBottom:48 }}>
+          <div style={{ maxWidth:320 }}>
+            <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:16 }}>
+              <span style={{ width:12, height:12, borderRadius:'50%', background:'radial-gradient(circle at 35% 35%, #FFD27A, var(--gold) 60%, #8a4a00 100%)', boxShadow:'0 0 10px rgba(224,149,0,0.6)' }} />
+              <span className="label" style={{ letterSpacing:'0.28em', fontSize:11 }}>Into The Sunset</span>
+            </div>
+            <p className="h-serif" style={{ fontSize:16, lineHeight:1.5, letterSpacing:'0.04em', color:'var(--cream)', margin:'0 0 6px' }}>
+              {t('The last warm','La dernière soirée')}{' '}<span style={{ fontStyle:'italic', color:'var(--coral)' }}>{t('evening','chaude')}</span>{t(' of summer.',` de l'été.`)}
+            </p>
+            <p style={{ fontSize:12, color:'var(--cream-mute)', margin:0, lineHeight:1.6 }}>{t('Sept 11 & 12, 2026 · McGill Lower Field · Montréal','11 et 12 sept. 2026 · Terrain inférieur McGill · Montréal')}</p>
+          </div>
+          <div>
+            <div className="label" style={{ color:'var(--gold)', marginBottom:16, fontSize:10 }}>{t('Follow us','Suivez-nous')}</div>
+            <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"
+                style={{ display:'flex', alignItems:'center', gap:10, color:'var(--cream-mute)', fontSize:13, transition:'color 160ms' }}
+                onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'}
+                onMouseLeave={e=>e.currentTarget.style.color='var(--cream-mute)'}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+                Instagram
+              </a>
+              <a href={TIKTOK_URL} target="_blank" rel="noopener noreferrer"
+                style={{ display:'flex', alignItems:'center', gap:10, color:'var(--cream-mute)', fontSize:13, transition:'color 160ms' }}
+                onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'}
+                onMouseLeave={e=>e.currentTarget.style.color='var(--cream-mute)'}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+                TikTok
+              </a>
+            </div>
+          </div>
+          <div>
+            <div className="label" style={{ color:'var(--gold)', marginBottom:16, fontSize:10 }}>Menu</div>
+            <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:10 }}>
+              {menuLinks.map(([l,h])=>(
+                <li key={h}><a href={h} style={{ fontSize:13, color:'var(--cream-soft)', letterSpacing:'0.04em', transition:'color 160ms' }}
+                  onMouseEnter={e=>e.currentTarget.style.color='var(--gold)'}
+                  onMouseLeave={e=>e.currentTarget.style.color='var(--cream-soft)'}>{l}</a></li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div style={{ paddingTop:24, borderTop:'1px solid rgba(253,246,236,0.07)', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:16, fontSize:11, letterSpacing:'0.1em', color:'var(--cream-mute)' }}>
+          <span>© 2026 MomentsThatLive · {t('Produced in partnership with','Produit en partenariat avec')} EUS, McGill University · Montréal, QC</span>
+          <span style={{ display:'flex', gap:16, alignItems:'center' }}>
+            <a href="privacy.html" style={{ transition:'color 160ms' }} onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'} onMouseLeave={e=>e.currentTarget.style.color=''}>{t('Privacy','Confidentialité')}</a>
+            <a href="terms.html" style={{ transition:'color 160ms' }} onMouseEnter={e=>e.currentTarget.style.color='var(--cream)'} onMouseLeave={e=>e.currentTarget.style.color=''}>{t('Terms','Modalités')}</a>
+            <LangLink />
+          </span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+// ─── App ──────────────────────────────────────────────────────────────────────
+function App(){
+  const [lang, setLang] = React.useState(localStorage.getItem('its_lang')||'en');
+  const setLangSave = l => { setLang(l); localStorage.setItem('its_lang',l); document.getElementById('html-root').lang=l; };
+  React.useEffect(()=>{ document.getElementById('html-root').lang=lang; },[lang]);
+  return (
+    <LangContext.Provider value={{lang, setLang:setLangSave}}>
+      <Nav />
+      <PageHero />
+      <VillageSection />
+      <FieldMapSection />
+      <GetThereSection />
+      <AccessSection />
+      <Footer />
+    </LangContext.Provider>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+<script>(function(){var root=document.getElementById('root'),done=false;function show(){if(done)return;done=true;root.classList.add('its-ready');}if(root&&root.firstChild){show();}else{var o=new MutationObserver(function(){if(root.firstChild){o.disconnect();show();}});o.observe(root,{childList:true,subtree:true});setTimeout(show,900);}document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('http')||h.startsWith('mailto')||h.startsWith('javascript')||a.target==='_blank')return;e.preventDefault();root.classList.remove('its-ready');document.body.classList.add('its-out');setTimeout(function(){location.href=h},270);});})();</script>
+<script src="cookie-consent.js"></script>
+<div id="cursor-glow" aria-hidden="true"></div>
+<style>
+#cursor-glow{position:fixed;top:0;left:0;width:500px;height:500px;border-radius:50%;pointer-events:none;z-index:9998;background:radial-gradient(circle,rgba(255,217,61,0.12) 0%,rgba(255,107,157,0.06) 40%,transparent 68%);opacity:0;transition:opacity 0.5s ease;will-change:transform;}
+@media(hover:none){#cursor-glow{display:none}}
+</style>
+<script>
+(function(){
+  var el=document.getElementById('cursor-glow');
+  var mx=0,my=0,cx=0,cy=0,on=false;
+  document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;if(!on){on=true;el.style.opacity='1';}});
+  document.addEventListener('mouseleave',function(){el.style.opacity='0';on=false;});
+  (function loop(){cx+=(mx-cx)*0.07;cy+=(my-cy)*0.07;el.style.transform='translate(calc('+cx.toFixed(1)+'px - 50%),calc('+cy.toFixed(1)+'px - 50%))';requestAnimationFrame(loop);})();
+})();
+</script>
+</body>
+</html>
